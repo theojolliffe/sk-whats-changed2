@@ -1,7 +1,7 @@
 <script context="module">
 	const prerender = true;
 
-  import { base, assets } from "$app/paths";
+	import { base, assets } from "$app/paths";
 
 	export async function load({ params, fetch }) {
     let id = params.id;
@@ -10,7 +10,6 @@
     let options = await options_raw.json();
 
 	let template_raw = await fetch(`${assets}/data/template.txt`)
-	console.log('template_raw', template_raw)
 	let template = await template_raw.text();
 	
 	let topics_raw = await fetch(`${assets}/data/topics.json`);;
@@ -39,40 +38,49 @@
 	}
 </script>
 
+
 <script>
-  import { uds, adv, udord, sign, nuword, eq, ageBandLU, ord, uncap1, getData, regionThe, drop, ud, otherRank, otherEst, qui, cha, cur, figs, get_word, chains, prev } from "./utils";
-  import { goto } from '$app/navigation';
-  import { capitalise } from "$lib/utils";
-
-  import Titleblock from "$lib/layout/Titleblock.svelte";
-	import Headline from "$lib/layout/partial/Headline.svelte";
-	import Section from "$lib/layout/Section.svelte";
-	import Article from "$lib/layout/Article.svelte";
-	import Figure from "$lib/layout/partial/Figure.svelte";
-	import Linkbox from "$lib/layout/Linkbox.svelte";
-  import Select from "$lib/ui/Select.svelte";
-
-	// // import { ScatterChart } from './@onsvisual/svelte-charts';
-	// import ScatterChart from './charts/ScatterChart/ScatterChart.svelte';
-	// import AgeChart from './charts/small-multiple/AgeChart.svelte';
-	// import HBarChart from './charts/HBarChart/HBarChart.svelte';
-	// import DotPlotChart from './charts/DotPlotChart.svelte';
-
-  // import { load as loadarch } from "archieml";
-  import robojournalist from 'robojournalist';
-  import pluralize from 'pluralize';
-	import Fuse from 'fuse.js';
-
-  export let options;
-  export let topics;
-  export let template;
-  export let place;
-  export let s;
-  export let rgn;
-  export let eng;
-  export let wal;
-
-  var health, expand, cou, props;
+	import { uds, adv, udord, sign, nuword, eq, ageBandLU, ord, uncap1, getData, regionThe, drop, ud, otherRank, otherEst, qui, cha, cur, figs, get_word, chains, prev } from "./utils";
+	import { goto } from '$app/navigation';
+	import { capitalise } from "$lib/utils";
+  
+	import Titleblock from "$lib/layout/Titleblock.svelte";
+	  import Headline from "$lib/layout/partial/Headline.svelte";
+	  import Section from "$lib/layout/Section.svelte";
+	  import Article from "$lib/layout/Article.svelte";
+	  import Figure from "$lib/layout/partial/Figure.svelte";
+	  import Linkbox from "$lib/layout/Linkbox.svelte";
+	import Select from "$lib/ui/Select.svelte";
+  
+	  // // import { ScatterChart } from './@onsvisual/svelte-charts';
+	  import ScatterChart from '$lib/charts/ScatterChart/ScatterChart.svelte';
+	  import AgeChart from '$lib/charts/small-multiple/AgeChart.svelte';
+	  import HBarChart from '$lib/charts/HBarChart/HBarChart.svelte';
+	  import DotPlotChart from '$lib/charts/DotPlotChart.svelte';
+  
+	// import { load as loadarch } from "archieml";
+	import robojournalist from 'robojournalist';
+	import pluralize from 'pluralize';
+	  import Fuse from 'fuse.js';
+  
+	export let options;
+	console.log('options', options)
+	export let topics;
+	console.log('topics', topics)
+	export let template;
+	console.log('template', template)
+	export let place;
+	console.log('place', place)
+	export let s;
+	console.log('s', s)
+	export let rgn;
+	console.log('rgn', rgn)
+	export let eng;
+	console.log('eng', eng)
+	export let wal;
+	console.log('wal', wal)
+  
+	var health, expand, cou, props;
 
   // Define the word to describe population change in standfirst
   if (place.data.population.value.change.all>8) {
@@ -267,6 +275,7 @@
 
     return res.split(`<div id="esc123"></div>`)
   }
+
 
   function fbp(x) {
 		return Number.parseFloat(Number.parseFloat(0.714*x).toPrecision(2))
@@ -493,12 +502,12 @@
 		}
 	}
 
-	function readMore() {
+
+  function readMore() {
 		more = !more
 		results = results
 	}
-
-</script>
+  </script>
 
 <svelte:head>
   <title>{place.name}</title>
@@ -537,7 +546,7 @@
     {#each results(place, rgn, topics) as res, i (i)}
       {@html res}
       <div style="width: 100%">
-        {#if false && i < place.stories.length}
+        {#if i < place.stories.length}
           {#if makeProps(i)}
           {console.log('makeProps(i)', makeProps(i))}
             <svelte:component this="{chartType(i)}" {...makeProps(i)}/>

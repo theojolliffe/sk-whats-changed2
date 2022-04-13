@@ -1,7 +1,7 @@
 /** @type {import('@sveltejs/kit').Config} */
 import adapter from '@sveltejs/adapter-static';
 
-const production = process.env.NODE_ENV === 'production';
+const production =  process.env.NODE_ENV === 'production'; // false //
 
 console.log('production', production)
 
@@ -13,8 +13,8 @@ const config = {
 			fallback: null
 		}),
 		paths: {
-			assets: production ? 'https://theojolliffe.github.io/sk-whats-changed' : '',
-			base: production ? '/sk-whats-changed' : ''
+			assets: production ? 'https://theojolliffe.github.io/sk-whats-changed2' : '',
+			base: production ? '/sk-whats-changed2' : ''
 		}
 	}
 };

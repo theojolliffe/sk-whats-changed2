@@ -1,7 +1,7 @@
 {
   "name": "sk-whats-changed",
   "version": "0.0.1",
-  "homepage": "http://theojolliffe.github.io/sk-whats-changed2",
+  "homepage": "http://theojolliffe.github.io/sk-whats-changed",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build && touch build/.nojekyll",
@@ -17,7 +17,8 @@
     "parse-color": "^1.0.0",
     "svelte": "^3.34.0",
     "svelte-preprocess": "^4.7.3",
-    "svelte-select": "^4.4.7"
+    "svelte-select": "^4.4.7",
+    "layercake": "^6.1.0"
   },
   "type": "module",
   "dependencies": {
@@ -30,7 +31,6 @@
     "d3-shape": "^3.1.0",
     "fuse.js": "^6.5.3",
     "html2canvas": "^1.4.1",
-    "layercake": "^6.1.0",
     "pluralize": "^8.0.0",
     "regl": "^2.1.0",
     "robojournalist": "^0.0.9",
