@@ -574,23 +574,23 @@ mixin rank1reg(i)
         | #[+butSlower(i, "_local")]
     else
         p This area saw #[+value(parent)]'s 
-        // If it's a tie
-        if ( (Math.abs(rl) < 3) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].change ) )
-            | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
-            | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
-            | , alongside 
-            | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)].
-        else if ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) )
-            | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
-            | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
-            | , alongside 
-            | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name)].
-            | The #[+value((rl<0)? drop(-1, 'largest fall', 'largest rise'):drop(1, 'largest fall', 'largest rise'))] was seen in 
-            | #[+value(data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)]
-        else
-            | #[+value(drop(rl, 'largest fall', 'largest rise'))]
-            | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)].
-            p #[+acrossRegion(i)]
+            // If it's a tie
+            if ( (Math.abs(rl) < 3) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].change ) )
+                | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
+                | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
+                | , alongside 
+                | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)].
+            else if ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) )
+                | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
+                | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
+                | , alongside 
+                | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name)].
+                | The #[+value((rl<0)? drop(-1, 'largest fall', 'largest rise'):drop(1, 'largest fall', 'largest rise'))] was seen in 
+                | #[+value(data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)]
+            else
+                | #[+value(drop(rl, 'largest fall', 'largest rise'))]
+                | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)].
+                p #[+acrossRegion(i)]
 
 //- This district saw England's second-largest fall in the proportion of people who describe themselves as Christian.
 mixin rank1nat(i)
