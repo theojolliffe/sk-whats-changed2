@@ -1,8 +1,8 @@
-// This coincided with a remarkable transformation of the city’s health, housing and ethnic makeup.
-tenure.general: housing
+// This coincided with a remarkable transformation of the city’s health, housing and ethnicity.
+tenure.general: housing tenure
 welsh.general: knowledge of the Welsh language
 health.general: health
-ethnicity.general: ethnic makeup
+ethnicity.general: ethnicity
 economic.general: jobs
 household.general: relationships
 religion.general: religion
@@ -20,25 +20,25 @@ agemed.adj.high: oldest
 agemed.adj.low: youngest
 
 // Giving it the greatest ***headcount*** of any local authority area in the North West of England.
-// Census 2011 data also shows a shift in ***working patterns***.
-tenure.synonym: housing shift in {plcname}
-health.synonym: shift in the local population's well-being
-ethnicity.synonym: shift in the ethnic makeup of {plcname}
-economic.synonym: shift in the employment status of many here
-household.synonym: shift in family life for many in {plcname}
-religion.synonym: shift in the local population's religion
-care.synonym: shift in the amount of unpaid care provided here
-children.synonym: shift in family life for many in {plcname} 
-hoursworked.synonym: shift in the working patterns of many in {plcname}
-marital.synonym: shift in the relationships of many here
-population.synonym: shift in {plcnam}'s population
-agemed.synonym: shift in the local population's average age
+// Census 2011 data also shows a change in ***working patterns***.
+tenure.synonym: housing tenure change in {plcname}
+health.synonym: change in the local population's well-being
+ethnicity.synonym: change in the ethnicity of {plcname}
+economic.synonym: change in the employment status of many here
+household.synonym: change in family life for many in {plcname}
+religion.synonym: change in the local population's religion
+care.synonym: change in the amount of unpaid care provided here
+children.synonym: change in family life for many in {plcname} 
+hoursworked.synonym: change in the working patterns of many in {plcname}
+marital.synonym: change in the relationships of many here
+population.synonym: change in {plcnam}'s population
+agemed.synonym: change in the local population's average age
 
 // The religious profile of Torbay changed considerably in the 10 years leading up to the last census
 // ***Health improved considerably in Torbay*** in the 10 years leading up to the last census
-tenure.profile: housing in {plcname} changed substantially
+tenure.profile: housing tenure in {plcname} changed substantially
 health.profile: health {health} substantially in {plcname}
-ethnicity.profile: ethnic makeup of {plcname} changed substantially 
+ethnicity.profile: ethnicity of {plcname} changed substantially 
 economic.profile: work life changed for many in {plcname}
 household.profile: housing in {plcname} changed substantially
 religion.profile: the religious profile of {plcname} changed substantially
@@ -50,55 +50,55 @@ population.profile: {plcname}'s population {expanded}
 agemed.profile: {plcname}'s population grew older
 welsh.profile: the use of welsh changed substantially in {plcname}
 
-// In the 10 years leading up to the last census, the percentage of ***Manchester residents that rent privately*** increased from about 16% to over 28%.
+// In the 10 years leading up to the last census, the percentage of ***Manchester residents that rented privately*** increased from about 16% to over 28%.
 // The proportion of employed people in Manchester working long hours increased from from about 16% to over 28%.
 
 children.Kids.clausal_modifier: households in {plcname} with children
 children.NoKids.clausal_modifier: households in {plcname} without children
 children.NonDepKids.clausal_modifier: households in {plcname} with only adult children living with their parents
 
-care.1to19hoursWeek.clausal_modifier: {plcname} residents that provide up to 19 hours of weekly unpaid care
-care.20to49hoursWeek.clausal_modifier: {plcname} residents that provide between 20 and 49 hours of weekly unpaid care
-care.40PlushoursWeek.clausal_modifier: {plcname} residents that provide at least 50 hours of weekly unpaid care
+care.1to19hoursWeek.clausal_modifier: {plcname} residents that provided up to 19 hours of weekly unpaid care
+care.20to49hoursWeek.clausal_modifier: {plcname} residents that provided between 20 and 49 hours of weekly unpaid care
+care.40PlushoursWeek.clausal_modifier: {plcname} residents that provided at least 50 hours of weekly unpaid care
 
 marital.Single.clausal_modifier: single people in {plcname}
-marital.Married.clausal_modifier: adults in {plcname} that are married
-marital.Seperated.clausal_modifier: adults in {plcname} that have divorced or separated from a married or civil partner 
+marital.Married.clausal_modifier: adults in {plcname} that were married
+marital.Seperated.clausal_modifier: adults in {plcname} that had divorced or separated from a married or civil partner 
 
-tenure.rented_private.clausal_modifier: households in {plcname} that rent privately
-tenure.rented_social.clausal_modifier: {plcname} households that rent through social housing schemes
-tenure.owned.clausal_modifier: {plcname} households that own their home
+tenure.rented_private.clausal_modifier: households in {plcname} that rented privately
+tenure.rented_social.clausal_modifier: {plcname} households that rented through social housing schemes
+tenure.owned.clausal_modifier: {plcname} households that owner their home
 
-health.good.clausal_modifier: {plcname} residents that describe their health as good or very good
-health.fair.clausal_modifier: {plcname} residents that describe their health as fair
-health.bad.clausal_modifier: {plcname} residents that describe their health as bad or very bad
+health.good.clausal_modifier: {plcname} residents that described their health as good or very good
+health.fair.clausal_modifier: {plcname} residents that described their health as fair
+health.bad.clausal_modifier: {plcname} residents that described their health as bad or very bad
 
 ethnicity.white.clausal_modifier: {plcname} residents from one of the White ethnic groups
 ethnicity.black.clausal_modifier: {plcname} residents from one of the Black, Black British, Caribbean or African ethnic groups
 ethnicity.asian.clausal_modifier: {plcname} residents from one of the Asian or Asian British ethnic groups
-ethnicity.mixed.clausal_modifier: {plcname} residents from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.clausal_modifier: {plcname} residents from an Other ethnic group (such as ’Arab’)
+ethnicity.mixed.clausal_modifier: {plcname} residents from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.clausal_modifier: {plcname} residents from the Other ethnic groups (such as ’Arab’)
 
-economic.employee.clausal_modifier: {plcname} residents that are employed
-economic.inactive.clausal_modifier: {plcname} residents that are not working or actively seeking work
-economic.self-employed.clausal_modifier: {plcname} residents that are self-employed
-economic.unemployed.clausal_modifier: {plcname} residents that are unemployment
-economic.student.clausal_modifier: {plcname} residents that are studying
+economic.employee.clausal_modifier: {plcname} residents that were employed
+economic.inactive.clausal_modifier: {plcname} residents that were not working or actively seeking work
+economic.self-employed.clausal_modifier: {plcname} residents that were self-employed
+economic.unemployed.clausal_modifier: {plcname} residents that were unemployed
+economic.student.clausal_modifier: {plcname} residents that were studying
 
-household.Cohabiting.clausal_modifier: households in {plcname}, which comprise a cohabiting couple,
-household.LoneParent.clausal_modifier: households in {plcname}, which comprise a single parent,
-household.OnePerson.clausal_modifier: households in {plcname}, which comprise a single person,
-household.Married.clausal_modifier: households in {plcname}, which comprise a married couple (with or without children),
+household.Cohabiting.clausal_modifier: households in {plcname}, which comprised a cohabiting couple,
+household.LoneParent.clausal_modifier: households in {plcname}, which comprised a single parent,
+household.OnePerson.clausal_modifier: households in {plcname}, which comprised a single person,
+household.Married.clausal_modifier: households in {plcname}, which comprised a married couple (with or without children),
 
-religion.Christian.clausal_modifier: people in {plcname} that describe themselves as Christian
-religion.Buddhist.clausal_modifier: people in {plcname} that describe themselves as Buddhist
-religion.Hindu.clausal_modifier: people in {plcname} that describe themselves as Hindu
-religion.Sikh.clausal_modifier: people in {plcname} that describe themselves as Sikh
-religion.Jewish.clausal_modifier: people in {plcname} that describe themselves as Jewish
-religion.Muslim.clausal_modifier: people in {plcname} that describe themselves as Muslim
-religion.Noreligion.clausal_modifier: people in {plcname} that have no religion
+religion.Christian.clausal_modifier: people in {plcname} that described themselves as Christian
+religion.Buddhist.clausal_modifier: people in {plcname} that described themselves as Buddhist
+religion.Hindu.clausal_modifier: people in {plcname} that described themselves as Hindu
+religion.Sikh.clausal_modifier: people in {plcname} that described themselves as Sikh
+religion.Jewish.clausal_modifier: people in {plcname} that described themselves as Jewish
+religion.Muslim.clausal_modifier: people in {plcname} that described themselves as Muslim
+religion.Noreligion.clausal_modifier: people in {plcname} that said they had no religion
 religion.Religionnotstated.clausal_modifier: people in {plcname} that did not state their religion
-religion.Otherreligion.clausal_modifier: people in {plcname} that identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Otherreligion.clausal_modifier: people in {plcname} that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
 hoursworked.Female1-15.clausal_modifier: employees working less than 16 weekly hours
 hoursworked.Female49plus.clausal_modifier: employees working more than 49 hours in the week before the census
@@ -106,13 +106,13 @@ hoursworked.Male1-15.clausal_modifier: employed people in {plcname} working less
 hoursworked.Male49plus.clausal_modifier: employed people in {plcname} working more than 49 hours in the week before the census
 
 // Chart subtitle: The percentage of households **rented privately** across local authority areas in the East Midlands and the average across England, March 2011
-// Chart subtitle: The percentage of usual residents in Derby, the East Midlands and England **said they rent privately**, March 2001, March 2011
+// Chart subtitle: The percentage of usual residents in Derby, the East Midlands and England **said they rented privately**, March 2001, March 2011
 
 children.Kids.verb_past: with at least one dependent child
 children.NoKids.verb_past: without children
-children.NonDepKids.verb_past: where a parent lives with their adult children
+children.NonDepKids.verb_past: where a parent lived with their adult children
 
-welsh.SpeaksWelsh.verb_past: that said they can speak Welsh
+welsh.SpeaksWelsh.verb_past: that said they could speak Welsh
 
 care.1to19hoursWeek.verb_past: that reported providing up to 19 hours of unpaid care each week
 care.20to49hoursWeek.verb_past: that reported providing between 20 and 49 hours of unpaid care each week
@@ -122,19 +122,19 @@ marital.Single.verb_past: that said they were single
 marital.Married.verb_past: that said they were married
 marital.Seperated.verb_past: that said they had divorced or broken up with a married or civil partner
 
-tenure.rented_private.verb_past: that rent privately
-tenure.rented_social.verb_past: that rent socially
-tenure.owned.verb_past: that own their home
+tenure.rented_private.verb_past: that rented privately
+tenure.rented_social.verb_past: that rented socially
+tenure.owned.verb_past: that owner their home
 
 health.good.verb_past: that said their health was good or very good
 health.fair.verb_past: that said their health was fair
 health.bad.verb_past: said their health was bad or very bad
 
-ethnicity.white.verb_past: that said they were from a White ethnic group
-ethnicity.black.verb_past: that said they were from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.verb_past: that said they were from an Asian or Asian British ethnic group
-ethnicity.mixed.verb_past: that said they were from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.verb_past: that said they were from an Other ethnic group (such as ’Arab’)
+ethnicity.white.verb_past: that said they were from the White ethnic groups
+ethnicity.black.verb_past: that said they were from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.verb_past: that said they were from the Asian or Asian British ethnic groups
+ethnicity.mixed.verb_past: that said they were from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.verb_past: that said they were from the Other ethnic groups (such as ’Arab’)
 
 economic.employee.verb_past: that said they were employed
 economic.inactive.verb_past: that said they were not working or actively seeking work
@@ -147,15 +147,15 @@ household.LoneParent.verb_past: that had a single parent
 household.OnePerson.verb_past: that comprised only a single person
 household.Married.verb_past: that had a married couple
 
-religion.Christian.verb_past: that describe themselves as Christian
-religion.Buddhist.verb_past: that describe themselves as Buddhist
-religion.Hindu.verb_past: that describe themselves as Hindu
-religion.Sikh.verb_past: that describe themselves as Sikh
-religion.Jewish.verb_past: that describe themselves as Jewish
-religion.Muslim.verb_past: that describe themselves as Muslim
+religion.Christian.verb_past: that described themselves as Christian
+religion.Buddhist.verb_past: that described themselves as Buddhist
+religion.Hindu.verb_past: that described themselves as Hindu
+religion.Sikh.verb_past: that described themselves as Sikh
+religion.Jewish.verb_past: that described themselves as Jewish
+religion.Muslim.verb_past: that described themselves as Muslim
 religion.Noreligion.verb_past: that said they had no religion
 religion.Religionnotstated.verb_past: that did not state their religion
-religion.Otherreligion.verb_past: that identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Otherreligion.verb_past: that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
 hoursworked.Female1-15.verb_past: that said they had worked less than 16 hours the week before completing the census
 hoursworked.Female49plus.verb_past: that said they had worked over 49 hours the week before completing the census
@@ -163,13 +163,13 @@ hoursworked.Male1-15.verb_past: that said they had worked less than 16 hours the
 hoursworked.Male49plus.verb_past: that said they had worked over 49 hours the week before completing the census
 
 
-// Just over 3 in 10 (32%) ***said they live in social housing*** in 2011, compared with about 39% in 2001
+// Just over 3 in 10 (32%) ***said they lived in social housing*** in 2011, compared with about 39% in 2001
 
 children.Kids.verb_past_samp: had at least one dependent child
 children.NoKids.verb_past_samp: had no children
 children.NonDepKids.verb_past_samp: had only adult children living with their parents
 
-welsh.SpeaksWelsh.verb_past_samp: said they can speak Welsh
+welsh.SpeaksWelsh.verb_past_samp: said they could speak Welsh
 
 care.1to19hoursWeek.verb_past_samp: reported providing up to 19 hours of unpaid care each week
 care.20to49hoursWeek.verb_past_samp: reported providing between 20 and 49 hours of unpaid care each week
@@ -179,19 +179,19 @@ marital.Single.verb_past_samp: said they were single
 marital.Married.verb_past_samp: said they were married
 marital.Seperated.verb_past_samp: said they had divorced or broken up with a married or civil partner
 
-tenure.rented_private.verb_past_samp: rent privately
-tenure.rented_social.verb_past_samp: live in social housing
-tenure.owned.verb_past_samp: own their home
+tenure.rented_private.verb_past_samp: rented privately
+tenure.rented_social.verb_past_samp: lived in social housing
+tenure.owned.verb_past_samp: owner their home
 
 health.good.verb_past_samp: said their health was good or very good
 health.fair.verb_past_samp: said their health was fair
 health.bad.verb_past_samp: said their health was bad or very bad
 
-ethnicity.white.verb_past_samp: said they were from a White ethnic group
-ethnicity.black.verb_past_samp: said they were from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.verb_past_samp: said they were from an Asian or Asian British ethnic group
-ethnicity.mixed.verb_past_samp: said they were from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.verb_past_samp: said they were from an Other ethnic group (such as ’Arab’)
+ethnicity.white.verb_past_samp: said they were from the White ethnic groups
+ethnicity.black.verb_past_samp: said they were from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.verb_past_samp: said they were from the Asian or Asian British ethnic groups
+ethnicity.mixed.verb_past_samp: said they were from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.verb_past_samp: said they were from the Other ethnic groups (such as ’Arab’)
 
 economic.employee.verb_past_samp: said they were employed
 economic.inactive.verb_past_samp: said they were not working or actively seeking work
@@ -220,7 +220,7 @@ hoursworked.Male1-15.verb_past_samp: said they had worked less than 16 hours the
 hoursworked.Male49plus.verb_past_samp: said they had worked over 49 hours the week before completing the census
 
 
-// The percentage of ***healthy residents*** is increasing faster here than in any other local authority district across England.
+// The percentage of ***healthy residents*** increased faster here than in any other local authority district across England.
 
 children.Kids.adj_noun: households with children
 children.NoKids.adj_noun: households without children
@@ -230,26 +230,26 @@ care.1to19hoursWeek.adj_noun: people providing up to 19 hours of weekly unpaid c
 care.20to49hoursWeek.adj_noun: people providing between 20 and 49 hours of weekly unpaid care
 care.40PlushoursWeek.adj_noun: people providing 50 hours, or more, of weekly unpaid care
 
-marital.Single.adj_noun: people who have never been married or in a civil partnership
+marital.Single.adj_noun: people who had never been married or in a civil partnership
 marital.Married.adj_noun: married people
-marital.Seperated.adj_noun: people who have divorced or separated from a married or civil partner
+marital.Seperated.adj_noun: people who had divorced or separated from a married or civil partner
 
 tenure.rented_private.adj_noun: privately rented homes
 tenure.rented_social.adj_noun: socially rented homes
-tenure.owned.adj_noun: households that own their home
+tenure.owned.adj_noun: households that owner their home
 
-health.good.adj_noun: residents that perceive their health as good or very good
+health.good.adj_noun: residents that perceived their health as good or very good
 health.fair.adj_noun: people that described their health as fair
-health.bad.adj_noun: residents that perceive their health as bad or very bad
+health.bad.adj_noun: residents that perceived their health as bad or very bad
 
-ethnicity.white.adj_noun: residents from a White ethnic group
-ethnicity.black.adj_noun: residents from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.adj_noun: residents from an Asian or Asian British ethnic group
-ethnicity.mixed.adj_noun: residents from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.adj_noun: residents from an Other ethnic group (such as ’Arab’)
+ethnicity.white.adj_noun: residents from the White ethnic groups
+ethnicity.black.adj_noun: residents from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.adj_noun: residents from the Asian or Asian British ethnic groups
+ethnicity.mixed.adj_noun: residents from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.adj_noun: residents from the Other ethnic groups (such as ’Arab’)
 
 economic.employee.adj_noun: employed people
-economic.inactive.adj_noun: people who are not working or actively seeking work
+economic.inactive.adj_noun: people who were not working or actively seeking work
 economic.self-employed.adj_noun: self-employed people
 economic.unemployed.adj_noun: unemployed people
 economic.student.adj_noun: students
@@ -259,15 +259,15 @@ household.LoneParent.adj_noun: single-parent households
 household.OnePerson.adj_noun: single-person households
 household.Married.adj_noun: households with a married couple
 
-religion.Christian.adj_noun: people who describe themselves as Christian
-religion.Buddhist.adj_noun: people who describe themselves as Buddhist
-religion.Hindu.adj_noun: people who describe themselves as Hindu
-religion.Sikh.adj_noun: people who describe themselves as Sikh
-religion.Jewish.adj_noun: people who describe themselves as Jewish
-religion.Muslim.adj_noun: people who describe themselves as Muslim
-religion.Noreligion.adj_noun: people who describe themselves as having no religion
+religion.Christian.adj_noun: people who described themselves as Christian
+religion.Buddhist.adj_noun: people who described themselves as Buddhist
+religion.Hindu.adj_noun: people who described themselves as Hindu
+religion.Sikh.adj_noun: people who described themselves as Sikh
+religion.Jewish.adj_noun: people who described themselves as Jewish
+religion.Muslim.adj_noun: people who described themselves as Muslim
+religion.Noreligion.adj_noun: people who described themselves as having no religion
 religion.Religionnotstated.adj_noun: people who did not disclose their religious affiliation
-religion.Otherreligion.adj_noun: people who identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Otherreligion.adj_noun: people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
 hoursworked.Female1-15.adj_noun: people working less than 16 hours in a week
 hoursworked.Female49plus.adj_noun: people working long hours
@@ -281,55 +281,55 @@ children.Kids.verb: with at least one child
 children.NoKids.verb: with no children
 children.NonDepKids.verb: that includes an adult living with parents
 
-care.1to19hoursWeek.verb: that provide up to 19 hours of weekly unpaid care
-care.20to49hoursWeek.verb: that provide between 20 and 49 hours of weekly unpaid care
-care.40PlushoursWeek.verb: that provide 50 hours, or more, of weekly unpaid care
+care.1to19hoursWeek.verb: that provided up to 19 hours of weekly unpaid care
+care.20to49hoursWeek.verb: that provided between 20 and 49 hours of weekly unpaid care
+care.40PlushoursWeek.verb: that provided 50 hours, or more, of weekly unpaid care
 
 marital.Single.verb: that said they were single
-marital.Married.verb: that said they are married
-marital.Seperated.verb: that said they have divorced or separated from a married or civil partner
+marital.Married.verb: that said they were married
+marital.Seperated.verb: that said they had divorced or separated from a married or civil partner
 
 tenure.rented_private.verb: of privately rented homes
 tenure.rented_social.verb: of socially rented homes
-tenure.owned.verb: of households that own their home
+tenure.owned.verb: of households that owner their home
 
-health.good.verb: that perceive their health as good or very good
+health.good.verb: that perceived their health as good or very good
 health.fair.verb: that described their health as fair
-health.bad.verb: that perceive their health as bad or very bad
+health.bad.verb: that perceived their health as bad or very bad
 
-ethnicity.white.verb: from a White ethnic group
-ethnicity.black.verb: from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.verb: from an Asian or Asian British ethnic group
-ethnicity.mixed.verb: from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.verb: from an Other ethnic group (such as ’Arab’)
+ethnicity.white.verb: from the White ethnic groups
+ethnicity.black.verb: from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.verb: from the Asian or Asian British ethnic groups
+ethnicity.mixed.verb: from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.verb: from the Other ethnic groups (such as ’Arab’)
 
-economic.employee.verb: that are employed
-economic.inactive.verb: that are not working or actively seeking work
-economic.self-employed.verb: that are self-employed
-economic.unemployed.verb: that are unemployed
-economic.student.verb: that are students
+economic.employee.verb: that were employed
+economic.inactive.verb: that were not working or actively seeking work
+economic.self-employed.verb: that were self-employed
+economic.unemployed.verb: that were unemployed
+economic.student.verb: that were students
 
 household.Cohabiting.verb: with an unmarried couple
-household.LoneParent.verb: with a sinle parent
+household.LoneParent.verb: with a single parent
 household.OnePerson.verb: with just a single person
 household.Married.verb: with a married couple 
 
-religion.Christian.verb: that describe themselves as Christian
-religion.Buddhist.verb: that describe themselves as Buddhist
-religion.Hindu.verb: that describe themselves as Hindu
-religion.Sikh.verb: that describe themselves as Sikh
-religion.Jewish.verb: that describe themselves as Jewish
-religion.Muslim.verb: that describe themselves as Muslim
-religion.Noreligion.verb: that describe themselves as having no religion
+religion.Christian.verb: that described themselves as Christian
+religion.Buddhist.verb: that described themselves as Buddhist
+religion.Hindu.verb: that described themselves as Hindu
+religion.Sikh.verb: that described themselves as Sikh
+religion.Jewish.verb: that described themselves as Jewish
+religion.Muslim.verb: that described themselves as Muslim
+religion.Noreligion.verb: that described themselves as having no religion
 religion.Religionnotstated.verb: that did not disclose their religious affiliation
-religion.Otherreligion.verb: that identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Otherreligion.verb: that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
-hoursworked.Female1-15.verb: that work less than 16 hours in a week
-hoursworked.Female49plus.verb: that work over 49 hours in a week
-hoursworked.Male1-15.verb: that work less than 16 hours in a week
-hoursworked.Male49plus.verb: that work over 49 hours in a week
+hoursworked.Female1-15.verb: that worked less than 16 hours in a week
+hoursworked.Female49plus.verb: that worked over 49 hours in a week
+hoursworked.Male1-15.verb: that worked less than 16 hours in a week
+hoursworked.Male49plus.verb: that worked over 49 hours in a week
 
-// The percentage of ***healthy residents*** is increasing faster here than in any other local authority district across England.
+// The percentage of ***healthy residents*** increased faster here than in any other local authority district across England.
 
 welsh.SpeaksWelsh.subhead.pos: Rise in proportion of Welsh speakers
 welsh.SpeaksWelsh.subhead.neg: Fall in proportion of Welsh speakers
@@ -351,7 +351,7 @@ children.NonDepKids.subhead.neg: Fewer homes with adult children living with the
 children.NonDepKids.subhead.neu: Changes in family structure
 children.NonDepKids.subhead.buc: {plcname} stood out from other areas for children
 children.NonDepKids.subhead.sta: Families in {plcname}
-care.noCare.subhead.pos: Drop in unpaid care provision
+care.noCare.subhead.pos: Decrease in unpaid care provision
 care.noCare.subhead.neg: Rise in unpaid care provision
 care.noCare.subhead.neu: Change in unpaid care provision
 care.noCare.subhead.buc: {plcname} stood out from other areas for unpaid care provision
@@ -376,13 +376,13 @@ marital.Single.subhead.neg: Less single people in {plcname}
 marital.Single.subhead.neu: Changing relationships in {plcname}
 marital.Single.subhead.buc: {plcname} stood out from other areas for relationships
 marital.Single.subhead.sta: Relationships in {plcname}
-marital.Married.subhead.pos: Marriage on the up
-marital.Married.subhead.neg: Marriage declining
+marital.Married.subhead.pos: The percentage of married people increased
+marital.Married.subhead.neg: Fewer married people
 marital.Married.subhead.neu: Changing relationships in {plcname}
 marital.Married.subhead.buc: {plcname} stood out from other areas for relationships
 marital.Married.subhead.sta: Relationships in {plcname}
-marital.Seperated.subhead.pos: A decade of breakups
-marital.Seperated.subhead.neg: Relationships remain strong
+marital.Seperated.subhead.pos: More adults are separated from partners
+marital.Seperated.subhead.neg: Fewer adults are seperated from partners
 marital.Seperated.subhead.neu: Changing relationships in {plcname}
 marital.Seperated.subhead.buc: {plcname} stood out from other areas for relationships
 marital.Seperated.subhead.sta: Relationships in {plcname}
@@ -401,8 +401,8 @@ tenure.owned.subhead.neg: Fall in home ownership
 tenure.owned.subhead.neu: Change in {plcname} housing
 tenure.owned.subhead.buc: {plcname} stood out from other areas for housing
 tenure.owned.subhead.sta: Housing in {plcname}
-health.good.subhead.pos: Health improves
-health.good.subhead.neg: Health deteriorates
+health.good.subhead.pos: Health improved
+health.good.subhead.neg: Health deteriorated
 health.good.subhead.neu: Change in health
 health.good.subhead.buc: {plcname} stood out from other areas for health
 health.good.subhead.sta: Health in {plcname}
@@ -411,8 +411,8 @@ health.fair.subhead.neg: Fewer people in fair health
 health.fair.subhead.neu: Change in health
 health.fair.subhead.buc: {plcname} stood out from other areas for health
 health.fair.subhead.sta: Health in {plcname}
-health.bad.subhead.pos: Health deteriorates
-health.bad.subhead.neg: Health improves
+health.bad.subhead.pos: Health deteriorated
+health.bad.subhead.neg: Health improved
 health.bad.subhead.neu: Change in health
 health.bad.subhead.buc: {plcname} stood out from other areas for health
 health.bad.subhead.sta: Health in {plcname}
@@ -481,8 +481,8 @@ household.OnePerson.subhead.neg: Fewer people living alone
 household.OnePerson.subhead.neu: Changing household dynamics
 household.OnePerson.subhead.buc: {plcname} stood out from other areas for single-person households
 household.OnePerson.subhead.sta: Living alone in {plcname}
-household.Married.subhead.pos: Marriage on the up
-household.Married.subhead.neg: Marriage declining 
+household.Married.subhead.pos: The percentage of married people increased
+household.Married.subhead.neg: Fewer married people 
 household.Married.subhead.neu: Changing household dynamics
 household.Married.subhead.buc: {plcname} reverses marriage
 household.Married.subhead.sta: Marriage in {plcname}
@@ -531,23 +531,23 @@ religion.Otherreligion.subhead.neg: Religion in {plcname}
 religion.Otherreligion.subhead.neu: Religion in {plcname}
 religion.Otherreligion.subhead.buc: Religion in {plcname}
 religion.Otherreligion.subhead.sta: Religion in {plcname}
-hoursworked.Female1-15.subhead.pos: More people working fewer hours
-hoursworked.Female1-15.subhead.neg: Fewer people working fewer hours
+hoursworked.Female1-15.subhead.pos: More people worked short hours
+hoursworked.Female1-15.subhead.neg: Fewer people worked short hours
 hoursworked.Female1-15.subhead.neu: Change in work hours
 hoursworked.Female1-15.subhead.buc: {plcname} stood out from other areas for working hours
 hoursworked.Female1-15.subhead.sta: Working hours in {plcname}
-hoursworked.Female49plus.subhead.pos: More working long hours
+hoursworked.Female49plus.subhead.pos: More worked long hours
 hoursworked.Female49plus.subhead.neg: Fewer people working long hours
 hoursworked.Female49plus.subhead.neu: Change in work hours
 hoursworked.Female49plus.subhead.buc: {plcname} stood out from other areas for working hours
 hoursworked.Female49plus.subhead.sta: Working hours in {plcname}
-hoursworked.Male1-15.subhead.pos: More people working fewer hours
-hoursworked.Male1-15.subhead.neg: Fewer people working fewer hours
+hoursworked.Male1-15.subhead.pos: More people worked short hours
+hoursworked.Male1-15.subhead.neg: Fewer people worked short hours
 hoursworked.Male1-15.subhead.neu: Change in work hours
 hoursworked.Male1-15.subhead.buc: {plcname} stood out from other areas for working hours
 hoursworked.Male1-15.subhead.sta: Working hours in {plcname}
-hoursworked.Male49plus.subhead.pos: More working long hours
-hoursworked.Male49plus.subhead.neg: Fewer people working long hours
+hoursworked.Male49plus.subhead.pos: More worked long hours
+hoursworked.Male49plus.subhead.neg: Fewer people worked long hours
 hoursworked.Male49plus.subhead.neu: Change in work hours
 hoursworked.Male49plus.subhead.buc: {plcname} stood out from other areas for working hours
 hoursworked.Male49plus.subhead.sta: Working hours in {plcname}
@@ -556,11 +556,11 @@ hoursworked.Male49plus.subhead.sta: Working hours in {plcname}
 // ***The proportion of people from a Black ethnic group*** in Three Rivers rose from 1.0% to 1.8%
 population.all.sample: the population
 
-welsh.SpeaksWelsh.sample: The proportion of people who can speak Welsh
+welsh.SpeaksWelsh.sample: The proportion of people who could speak Welsh
 
-marital.Single.sample: the proportion of people who have never married or entered a civil partnership
+marital.Single.sample: the proportion of people who had never married or entered a civil partnership
 marital.Married.sample: the proportion of married people
-marital.Seperated.sample: the proportion of people who have divorced or separated from a marriage or civil partner
+marital.Seperated.sample: the proportion of people who had divorced or separated from a marriage or civil partner
 
 children.Kids.sample: the proportion of households with children
 children.NoKids.sample: the proportion of households without children
@@ -574,11 +574,11 @@ health.good.sample: the percentage of people in ’good’ or ’very good’ he
 health.fair.sample: the percentage of people in ’fair’ health
 health.bad.sample: the percentage of people in ’bad’ or ’very bad’ health
 
-ethnicity.white.sample: the share of people from a White ethnic group
-ethnicity.black.sample: the share of people from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.sample: the share of people from an Asian or Asian British ethnic group
-ethnicity.mixed.sample: the share of people from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.sample: the share of people from an Other ethnic group (such as ’Arab’)
+ethnicity.white.sample: the population from the White ethnic groups
+ethnicity.black.sample: the population from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.sample: the population from the Asian or Asian British ethnic groups
+ethnicity.mixed.sample: the population from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.sample: the population from the Other ethnic groups (such as ’Arab’)
 
 economic.employee.sample: the rate of employment
 economic.inactive.sample: the proportion of people not working or actively seeking work
@@ -586,20 +586,20 @@ economic.self-employed.sample: the rate of self-employment
 economic.unemployed.sample: the rate of unemployment
 economic.student.sample: the percentage of students
 
-household.Cohabiting.sample: the share of households with a cohabiting couple
-household.LoneParent.sample: the share of households with a single-parent
-household.OnePerson.sample: the share of households with only a single-person
-household.Married.sample: the share of households with a married couple
+household.Cohabiting.sample: the percentage of households with a cohabiting couple
+household.LoneParent.sample: the percentage of households with a single-parent
+household.OnePerson.sample: the percentage of households with only a single-person
+household.Married.sample: the percentage of households with a married couple
 
-religion.Christian.sample: the share of people who identify as Christian 
-religion.Buddhist.sample: the share of people who identify as Buddhist
-religion.Hindu.sample: the share of people who identify as Hindu
-religion.Sikh.sample: the share of people who identify as Sikh
-religion.Jewish.sample: the share of people who identify as Jewish
-religion.Muslim.sample: the share of people who identify as Muslim
-religion.Noreligion.sample: the share of people without a religion
-religion.Religionnotstated.sample: the share of people that did not state their religion
-religion.Otherreligion.sample: the share of people who identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Christian.sample: the population who identified as Christian 
+religion.Buddhist.sample: the population who identified as Buddhist
+religion.Hindu.sample: the population who identified as Hindu
+religion.Sikh.sample: the population who identified as Sikh
+religion.Jewish.sample: the population who identified as Jewish
+religion.Muslim.sample: the population who identified as Muslim
+religion.Noreligion.sample: the population without a religion
+religion.Religionnotstated.sample: the percentage of the popultion that did not state their religion
+religion.Otherreligion.sample: the population who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
 hoursworked.Female1-15.sample: the proportion of people working less than 16 hours in a week
 hoursworked.Female49plus.sample: long hour working
@@ -614,7 +614,7 @@ care.40PlushoursWeek.sample: the proportion of people providing 50 hours, or mor
 
 marital.Single.adj_noun_s: single people
 marital.Married.adj_noun_s: married people
-marital.Seperated.adj_noun_s: people who have divorced or separated
+marital.Seperated.adj_noun_s: people who had divorced or separated
 
 children.Kids.adj_noun_s: households with children
 children.NoKids.adj_noun_s: households without children
@@ -628,14 +628,14 @@ health.good.adj_noun_s: people describing their health as good or very good
 health.fair.adj_noun_s: people describing their health as fair
 health.bad.adj_noun_s: people describing their health as bad or very bad
 
-ethnicity.white.adj_noun_s: people from a White ethnic group
-ethnicity.black.adj_noun_s: people from a Black, Black British, Caribbean or African ethnic group
-ethnicity.asian.adj_noun_s: people from an Asian or Asian British ethnic group
-ethnicity.mixed.adj_noun_s: people from a Mixed ethnic group (such as ’Black and Asian’ or ‘European Mixed’)
-ethnicity.other.adj_noun_s: people from an Other ethnic group (such as ’Arab’)
+ethnicity.white.adj_noun_s: people from the White ethnic groups
+ethnicity.black.adj_noun_s: people from the Black, Black British, Caribbean or African ethnic groups
+ethnicity.asian.adj_noun_s: people from the Asian or Asian British ethnic groups
+ethnicity.mixed.adj_noun_s: people from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)
+ethnicity.other.adj_noun_s: people from the Other ethnic groups (such as ’Arab’)
 
 economic.employee.adj_noun_s: employed people
-economic.inactive.adj_noun_s: people who are not working or actively seeking work
+economic.inactive.adj_noun_s: people who were not working or actively seeking work
 economic.self-employed.adj_noun_s: self-employed people 
 economic.unemployed.adj_noun_s: unemployed people 
 economic.student.adj_noun_s: students
@@ -645,15 +645,15 @@ household.LoneParent.adj_noun_s: single-parent households
 household.OnePerson.adj_noun_s: single-person households
 household.Married.adj_noun_s: married households
 
-religion.Christian.adj_noun_s: people who identify as Christian
-religion.Buddhist.adj_noun_s: people who identify as Buddhist
-religion.Hindu.adj_noun_s: people who identify as Hindu
-religion.Sikh.adj_noun_s: people who identify as Sikh
-religion.Jewish.adj_noun_s: people who identify as Jewish
-religion.Muslim.adj_noun_s: people who identify as Muslim
+religion.Christian.adj_noun_s: people who identified as Christian
+religion.Buddhist.adj_noun_s: people who identified as Buddhist
+religion.Hindu.adj_noun_s: people who identified as Hindu
+religion.Sikh.adj_noun_s: people who identified as Sikh
+religion.Jewish.adj_noun_s: people who identified as Jewish
+religion.Muslim.adj_noun_s: people who identified as Muslim
 religion.Noreligion.adj_noun_s: people without a religion
 religion.Religionnotstated.adj_noun_s: people that did not state their religion
-religion.Otherreligion.adj_noun_s: people who identify with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
+religion.Otherreligion.adj_noun_s: people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism
 
 hoursworked.Female1-15.adj_noun_s: people working less than 16 hours
 hoursworked.Female49plus.adj_noun_s: long hours workers
@@ -676,7 +676,7 @@ tenure.subtitle: housing tenure
 children.subtitle: child occupancy
 marital.subtitle: marital status
 
-// This coincided with a remarkable transformation of the city’s health, housing and ethnic makeup.
+// This coincided with a remarkable transformation of the city’s health, housing and ethnicity.
 tenure.measure: households
 welsh.measure: people aged three and over
 health.measure: usual residents

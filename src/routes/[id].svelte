@@ -3,17 +3,21 @@
 
 	import { base, assets } from "$app/paths";
 
+	import { load as loadarch } from "archieml";
+
+
 	export async function load({ params, fetch }) {
     let id = params.id;
 
     let options_raw = await fetch(`${assets}/data/lad_list_2021.json`);
     let options = await options_raw.json();
 
-	let template_raw = await fetch(`${assets}/data/template.txt`)
+	let template_raw = await fetch(`${assets}/template.pug`)
 	let template = await template_raw.text();
 	
-	let topics_raw = await fetch(`${assets}/data/topics.json`);;
-    let topics = await topics_raw.json();
+	let topics_raw = await fetch(`${assets}/archie.aml`);;
+    let topics = await topics_raw.text();
+	topics = loadarch(topics)
 
     let place_raw = await fetch(`${assets}/data/json/place/${id}.json`);
     let place = await place_raw.json();
@@ -58,27 +62,18 @@
 	  import HBarChart from '$lib/charts/HBarChart/HBarChart.svelte';
 	  import DotPlotChart from '$lib/charts/DotPlotChart.svelte';
   
-	// import { load as loadarch } from "archieml";
 	import robojournalist from 'robojournalist';
 	import pluralize from 'pluralize';
 	  import Fuse from 'fuse.js';
   
 	export let options;
-	console.log('options', options)
 	export let topics;
-	console.log('topics', topics)
 	export let template;
-	console.log('template', template)
 	export let place;
-	console.log('place', place)
 	export let s;
-	console.log('s', s)
 	export let rgn;
-	console.log('rgn', rgn)
 	export let eng;
-	console.log('eng', eng)
 	export let wal;
-	console.log('wal', wal)
   
 	var health, expand, cou, props;
 
@@ -133,27 +128,11 @@
 
   let loaded = false
   const onRosaeNlgLoad = () => { loaded = true }
-  $: console.log('loaded', loaded)
 
   function gotoPlace(e) {
     goto(`${base}/${e.detail.code}`, {noscroll: true});
   }
 
-  console.log('place', place)
-  console.log('rgn', rgn)
-
-//   var topics;
-//     fetch("./archie.aml")
-//         .then((res) => res.text())
-//         .then((txt) => (topics = loadarch(txt)));
-
-  $: console.log('topics', topics)
-  $: console.log('template', template)
-
-//   var template;
-//     fetch("./template.pug")
-//         .then((res) => res.text())
-//         .then((txt) => (template = txt));
 
   let grewSyn = {
 		1: "expanded",
@@ -231,7 +210,7 @@
 			parent: uncap1(regionThe(place.parents[0].name)),
 			parentNT: uncap1(regionThe(place.parents[0].name, "NT")),
 			s: s,
-      sf: sf,
+      		sf: sf,
 			stories: place.stories,
 			priorities: place.Priorities,
 			grewSyn: grewSyn,
@@ -548,7 +527,6 @@
       <div style="width: 100%">
         {#if i < place.stories.length}
           {#if makeProps(i)}
-          {console.log('makeProps(i)', makeProps(i))}
             <svelte:component this="{chartType(i)}" {...makeProps(i)}/>
           {/if}
         {/if}
