@@ -1432,7 +1432,7 @@ mixin percPara(i, chain0_01, chain0_11, chain1_01, chain1_11)
         if (stories[i].type.includes('natRank'))
             | #[+rank1nat(i)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p Rates are standardised to account for variation in age, which can impact the local population's health.
             if (data[s[i][0]][s[i][1]+"_rank"].top_bottom[s[i][3]][1].change<0)
                 p #[+allOthers(i, "", "d")]
             else if (data[s[i][0]][s[i][1]+"_rank"].top_bottom[s[i][3]]["-1"].change>0)
@@ -1450,24 +1450,24 @@ mixin percPara(i, chain0_01, chain0_11, chain1_01, chain1_11)
             - var curBuck = 'regBuck'
             | #[+buck(i, curBuck, chain0_01, chain0_11, chain1_01, chain1_11)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
         else if ((stories[i].type.includes('couBuck'))|(eq(stories[i].type, ['couBuck'])))
             - var curBuck = 'couBuck'
             | #[+buck(i, curBuck, chain0_01, chain0_11, chain1_01, chain1_11)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
         else if (((stories[i].type.includes('size'))&(!hasSaid('SIZE')))|(eq(stories[i].type, ['size'])))
             recordSaid('SIZE')
             | #[+sent1Perc(i)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
             p #[+sent2Perc(i, chain0_01, chain0_11, chain1_01, chain1_11)]
             p #[+sent3Perc(i)]
         else if (stories[i].type.includes('locRank'))
             deleteSaid('SIZE')
             | #[+rank1reg(i)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
             if (data[s[i][0]][s[i][1]+"_rank_local"].top_bottom[s[i][3]][1].change<0)
                 p #[+allOthers(i, "_local", "d")]
             if (data[s[i][0]][s[i][1]+"_rank_local"].top_bottom[s[i][3]]["-1"].change>0)
@@ -1486,18 +1486,18 @@ mixin percPara(i, chain0_01, chain0_11, chain1_01, chain1_11)
             - var curBuck = 'simiBuck'
             | #[+buck(i, curBuck, chain0_01, chain0_11, chain1_01, chain1_11)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
         else if ((stories[i].type.includes('nearBuck'))&(!hasSaid('BUCK'))|(eq(stories[i].type, ['nearBuck'])))
             recordSaid('BUCK')
             - var curBuck = 'nearBuck'
             | #[+buck(i, curBuck, chain0_01, chain0_11, chain1_01, chain1_11)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
         else
             deleteSaid('SIZE')
             | #[+difference(i, chain0_01, chain0_11, chain1_01, chain1_11)]
             if (s[i][0] == 'health')
-                | Rates are standardised to account for variation in age, which can impact the local population's health.
+                p rates are standardised to account for variation in age, which can impact the local population's health.
         if (s[i][0]=='health')
             p #[+healthExplain]
 
