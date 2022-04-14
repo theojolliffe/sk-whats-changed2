@@ -449,17 +449,17 @@ economic.employee.subhead.sta: Employment in {plcname}
 economic.inactive.subhead.pos: More people not working or actively seeking work
 economic.inactive.subhead.neg: Fewer people not working or actively seeking work
 economic.inactive.subhead.neu: Changing work life
-economic.inactive.subhead.buc: {plcname} stood out from other areas for jobs
+economic.inactive.subhead.buc: {plcname} stood out from other areas for economic inactivity
 economic.inactive.subhead.sta: Economic inactivity in {plcname}
 economic.self-employed.subhead.pos: Rise in rate of self-employment
 economic.self-employed.subhead.neg: Fall in rate of self-employment
 economic.self-employed.subhead.neu: Changing work life
-economic.self-employed.subhead.buc: {plcname} stood out from other areas for jobs
+economic.self-employed.subhead.buc: {plcname} stood out from other areas for self-employment
 economic.self-employed.subhead.sta: Self-employment in {plcname}
 economic.unemployed.subhead.pos: Rise in rate of unemployment
 economic.unemployed.subhead.neg: Fall in rate of unemployment
 economic.unemployed.subhead.neu: Changing work life
-economic.unemployed.subhead.buc: {plcname} stood out from other areas for jobs
+economic.unemployed.subhead.buc: {plcname} stood out from other areas for unemployment
 economic.unemployed.subhead.sta: Unemployment in {plcname}
 economic.student.subhead.pos: More students
 economic.student.subhead.neg: Fewer students
