@@ -605,7 +605,8 @@
                 "neu": "Change in unpaid care provision",
                 "buc": "{plcname} stood out from other areas for unpaid care provision",
                 "sta": "Unpaid care in {plcname}"
-            }
+            },
+            "label": "No care provided"
         },
         "measure": "usual residents",
         "measure_s": ""

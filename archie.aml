@@ -731,6 +731,7 @@ religion.Otherreligion.label: Other
 care.1to19hoursWeek.label: 1 to 19 hours of unpaid care
 care.20to49hoursWeek.label: 20 to 49 hours of unpaid care
 care.40PlushoursWeek.label: 50 or more hours of unpaid care
+care.noCare.label: 50 or more hours of unpaid care
 
 ethnicity.white.label: White
 ethnicity.black.label: Black/Black British/Caribbean/African
