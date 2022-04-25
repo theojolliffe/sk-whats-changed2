@@ -1428,9 +1428,15 @@ mixin chartTitleBar(i)
     h4 
         | #[+value(topic(i).sample)] in 
         | #[+value(place.name)]
-        | #[+value((cha(s, place, i)<0)?"decreased":"increased")] by
-        | #[+rou(Math.abs(cha(s, place, i)))]
-        | percentage points
+        - function pcnoprint(x) { if (Math.abs(x)<10) { return Math.round(x*10)/10 }  else { return Math.round(x) } }
+        - function valnoprint(x) { return parseFloat(x.toPrecision(2)) }
+        if ( Math.abs(cha(s, place, i)) < 1.1 )
+            | remained close to 
+            | #[+pc( cur(s, place, i)  )]
+        else
+            | #[+value((cha(s, place, i)<0)?"decreased":"increased")] by
+            | #[+rou(Math.abs(cha(s, place, i)))]
+            | percentage points
     h5 
         | Percentage of #[+value(topics[s[i][0]].measure)] in
         | #[+value(cou.name)],
