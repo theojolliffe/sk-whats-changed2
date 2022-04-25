@@ -185,11 +185,11 @@
             "label": "Asian/Asian British"
         },
         "mixed": {
-            "clausal_modifier": "{plcname} residents from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
-            "verb_past": "that said they were from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
-            "verb_past_samp": "said they were from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
-            "adj_noun": "residents from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
-            "verb": "from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
+            "clausal_modifier": "{plcname} residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "verb_past": "that said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "verb_past_samp": "said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "adj_noun": "residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "verb": "from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -197,16 +197,16 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
-            "adj_noun_s": "people from the Mixed ethnic groups (such as ’Black and Asian’ or ‘European Mixed’)",
+            "sample": "the population from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "adj_noun_s": "people from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "label": "Mixed/Multiple"
         },
         "other": {
-            "clausal_modifier": "{plcname} residents from the Other ethnic groups (’Arab’ or any other ethnic group)",
-            "verb_past": "that said they were from the Other ethnic groups (’Arab’ or any other ethnic group)",
-            "verb_past_samp": "said they were from the Other ethnic groups (’Arab’ or any other ethnic group)",
-            "adj_noun": "residents from the Other ethnic groups (’Arab’ or any other ethnic group)",
-            "verb": "from the Other ethnic groups (’Arab’ or any other ethnic group)",
+            "clausal_modifier": "{plcname} residents from the Other ethnic groups (Arab or any other ethnic group)",
+            "verb_past": "that said they were from the Other ethnic groups (Arab or any other ethnic group)",
+            "verb_past_samp": "said they were from the Other ethnic groups (Arab or any other ethnic group)",
+            "adj_noun": "residents from the Other ethnic groups (Arab or any other ethnic group)",
+            "verb": "from the Other ethnic groups (Arab or any other ethnic group)",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -214,8 +214,8 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the Other ethnic groups (’Arab’ or any other ethnic group)",
-            "adj_noun_s": "people from the Other ethnic groups (’Arab’ or any other ethnic group)",
+            "sample": "the population from the Other ethnic groups (Arab or any other ethnic group)",
+            "adj_noun_s": "people from the Other ethnic groups (Arab or any other ethnic group)",
             "label": "Other"
         },
         "subtitle": "ethnic group",
