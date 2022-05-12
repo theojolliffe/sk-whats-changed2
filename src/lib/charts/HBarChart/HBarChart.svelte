@@ -7,7 +7,6 @@
   export let data;
 
   export let labels;
-  console.log('HB data', data)
 
   const extentGetters = {
     x: d => d.x,

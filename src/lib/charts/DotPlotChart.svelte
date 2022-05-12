@@ -15,8 +15,6 @@
 	const xKey = Object.keys(data[0]).filter(d => d !== yKey);
 	const seriesColors = ['#DF0667', '#3C388E', '#2166ac','#b2182b','grey'];
 
-	$: console.log('data', data)
-
 	data.forEach(d => {
 		xKey.forEach(name => {
 			d[name] = +d[name];

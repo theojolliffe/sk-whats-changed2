@@ -1,4 +1,5 @@
 <script context="module">
+	
 	const prerender = true;
 
 	import { base, assets } from "$app/paths";
@@ -12,12 +13,15 @@
     let options_raw = await fetch(`${assets}/data/lad_list_2021.json`);
     let options = await options_raw.json();
 
+	let reports_raw = await fetch(`${assets}/areareportsprgen.json`);
+    let reports = await reports_raw.json();
+	let prodResults = reports[id].split(`<div id="esc123"></div>`)
+
 	let template_raw = await fetch(`${assets}/template.pug`)
 	let template = await template_raw.text();
-	
-	let topics_raw = await fetch(`${assets}/archie.aml`);;
-    let topics = await topics_raw.text();
-	topics = loadarch(topics)
+
+	let topics_raw = await fetch(`${assets}/data/topics.json`);
+    let topics = await topics_raw.json();
 
     let place_raw = await fetch(`${assets}/data/json/place/${id}.json`);
     let place = await place_raw.json();
@@ -36,8 +40,25 @@
     let wal_raw = await fetch(`${assets}/data/json/place/W92000004.json`);
     let wal = await wal_raw.json();
 
+	let cou = place.parents[0].name=="Wales"?wal:eng
+
+	// var ladData
+	// // Data load functions
+	// console.log('getData', getData)
+	// getData("https://raw.githubusercontent.com/theojolliffe/census-data/main/laddata.csv").then(res => {
+	// 	res.forEach(d => {
+	// 		d.code = d[""];
+	// 		delete d[""];
+	// 	});
+	// 	ladData = res
+	// });
+
+	let ladData_raw = await fetch("https://raw.githubusercontent.com/theojolliffe/census-data/main/laddata.csv");
+  	let ladData_string = await ladData_raw.text();
+	let ladData = await csvParse(ladData_string, autoType);
+
     return {
-			props: { options, topics, place, rgn, eng, wal, s, template }
+			props: { options, topics, place, rgn, eng, wal, s, template, prodResults, cou, ladData }
 		}
 	}
 </script>
@@ -47,6 +68,7 @@
 	import { uds, adv, udord, sign, nuword, eq, ageBandLU, ord, uncap1, getData, regionThe, drop, ud, otherRank, otherEst, qui, cha, cur, figs, get_word, chains, prev } from "./utils";
 	import { goto } from '$app/navigation';
 	import { capitalise } from "$lib/utils";
+	import { csvParse, autoType } from 'd3-dsv';
   
 	import Titleblock from "$lib/layout/Titleblock.svelte";
 	  import Headline from "$lib/layout/partial/Headline.svelte";
@@ -74,8 +96,14 @@
 	export let rgn;
 	export let eng;
 	export let wal;
+	export let prodResults;
+	export let cou;
+	export let ladData;
   
-	var health, expand, cou, props;
+	var health, expand, props;
+
+	const production =  process.env.NODE_ENV === 'production'; // false //
+
 
   // Define the word to describe population change in standfirst
   if (place.data.population.value.change.all>8) {
@@ -110,24 +138,12 @@
 		});
 	});
 
-  var ladData
-  var ladLoaded = false
-  // Data load functions
-	getData("https://raw.githubusercontent.com/theojolliffe/census-data/main/laddata.csv").then(res => {
-		res.forEach(d => {
-			d.code = d[""];
-			delete d[""];
-		});
-		ladData = res
-		ladLoaded = true
-	});
-
   const findOne = (haystack, arr) => {
 		return arr.some(v => haystack.includes(v));
 	};
+	let loaded = false
+	const onRosaeNlgLoad = () => { loaded = true }
 
-  let loaded = false
-  const onRosaeNlgLoad = () => { loaded = true }
 
   function gotoPlace(e) {
     goto(`${base}/${e.detail.code}`, {noscroll: true});
@@ -195,61 +211,62 @@
 			}
 		});
 
-    cou = place.parents[0].name=="Wales"?wal:eng
+		console.log('place')
+    
 
     let res = rosaenlg_en_US.render(template, {
-      language: 'en_UK',
-			place: place,
-			data: place.data,
-			cou: cou,
-			// replace eng with country data (inc Wales)
-			eng: eng,
-			rgn: rgn,
-			uncap1: uncap1,
-			regionThe: regionThe,
-			parent: uncap1(regionThe(place.parents[0].name)),
-			parentNT: uncap1(regionThe(place.parents[0].name, "NT")),
-			s: s,
-      		sf: sf,
-			stories: place.stories,
-			priorities: place.Priorities,
-			grewSyn: grewSyn,
-			// locRankCha: locRankCha,
-			// natRankCha: natRankCha,
-			// locRankCur: locRankCur,
-			// natRankCur: natRankCur,
-			hiRank: place.hiRank,
-			topic: topic,
-			topics: o,
-			chains: chains,
-			country: place.parents[0].name=="Wales"?"Wales":"England",
-			get_word: get_word,
-			figs: figs,
-			otherEst: otherEst,
-			cur: cur,
-			cha: cha,
-			qui: qui,
-			// cap,cap,
-			otherRank: otherRank,
-			ud: ud,
-			drop, drop,
-			ord: ord,
-			ageBandLU: ageBandLU,
-			eq: eq,
-			nuword: nuword,
-			sign: sign,
-			udord: udord, 
-			near: place.nearbyArea.nearTops,
-			simi: place.similar,
-			adv: adv,
-			uds: uds,
-			more: more,
-			pluralize, pluralize,
-			countyLU: countyLU,
-			fuzz: fuzz,
-			prev: prev,
-			regionLU: regionLU,
-			findOne: findOne
+    	language: 'en_UK',
+		place: place,
+		data: place.data,
+		cou: cou,
+		// replace eng with country data (inc Wales)
+		eng: eng,
+		rgn: rgn,
+		uncap1: uncap1,
+		regionThe: regionThe,
+		parent: uncap1(regionThe(place.parents[0].name)),
+		parentNT: uncap1(regionThe(place.parents[0].name, "NT")),
+		s: s,
+		sf: sf,
+		stories: place.stories,
+		priorities: place.Priorities,
+		grewSyn: grewSyn,
+		// locRankCha: locRankCha,
+		// natRankCha: natRankCha,
+		// locRankCur: locRankCur,
+		// natRankCur: natRankCur,
+		hiRank: place.hiRank,
+		topic: topic,
+		topics: o,
+		chains: chains,
+		country: place.parents[0].name=="Wales"?"Wales":"England",
+		get_word: get_word,
+		figs: figs,
+		otherEst: otherEst,
+		cur: cur,
+		cha: cha,
+		qui: qui,
+		// cap,cap,
+		otherRank: otherRank,
+		ud: ud,
+		drop, drop,
+		ord: ord,
+		ageBandLU: ageBandLU,
+		eq: eq,
+		nuword: nuword,
+		sign: sign,
+		udord: udord, 
+		near: place.nearbyArea.nearTops,
+		simi: place.similar,
+		adv: adv,
+		uds: uds,
+		more: more,
+		pluralize, pluralize,
+		countyLU: countyLU,
+		fuzz: fuzz,
+		prev: prev,
+		regionLU: regionLU,
+		findOne: findOne
     })
 
     return res.split(`<div id="esc123"></div>`)
@@ -285,13 +302,26 @@
 				Object.keys(d.data[t].perc[g]).forEach(e => {
 					a.push({'x': e, 'y': d.data[t].perc[g][e], 'g': g})
 				});
-        if (s[0]=='religion') {
-          // filter out religion not stated
-					a = a.filter(d => d['x'] != "Religionnotstated")
-          // move 'Other' to the end of the list
-          const findOther = (e) => e['x'] == 'Otherreligion';
-          swap(a, a.findIndex(findOther), a.length-1);
+
+        		if (s[0]=='religion') {
+	
+				// filter out religion not stated
+				a = a.filter(d => d['x'] != "Religionnotstated")
+
+				// move 'Other' to the end of the list
+				const findOther = (e) => e['x'] == 'Otherreligion';
+				swap(a, a.findIndex(findOther), a.length-1);
 				}
+
+				if (s[0]=='ethnicity') {
+	
+				// move 'Other' to the end of the list
+				const findOther2 = (e) => e['x'] == 'other';
+				swap(a, a.findIndex(findOther2), a.length-1);
+				}
+
+				
+				
 				return a
 			}
 			let chartData
@@ -468,7 +498,7 @@
 			s[3] = s[3]+"_"+s[4]
 			s.pop()
 		}
-		if (["religion", "agemed", "ethnicity"].includes(s[0])) {
+		if (["religion", "agemed", "ethnicity", "care"].includes(s[0])) {
 			return AgeChart
 		} else if (["care"].includes(s[0])) {
 			return HBarChart
@@ -489,11 +519,11 @@
   </script>
 
 <svelte:head>
-  <title>{place.name}</title>
-  <meta property="og:title" content="{place.name}" />
+	<title>{place.name}</title>
+	<meta property="og:title" content="{place.name}" />
 	<meta property="og:description" content="This is a description of the page." />
 	<meta name="description" content="This is a description of the page." />
-  <script src="https://unpkg.com/rosaenlg@3.0.1/dist/rollup/rosaenlg_tiny_en_US_3.0.1_comp.js" on:load="{onRosaeNlgLoad()}"></script>
+	<script src="https://unpkg.com/rosaenlg@3.0.1/dist/rollup/rosaenlg_tiny_en_US_3.0.1_comp.js" on:load="{onRosaeNlgLoad()}"></script>
 </svelte:head>
 
 <Titleblock
@@ -510,28 +540,44 @@
     {label: 'Latest results and insights', url: '/'}
   ]}">
 	<Headline>{place.name}</Headline>
-  <p style:margin="0 0 10px 0" style:padding={0}><strong>{capitalise(place.gss.long)}: </strong>{capitalise(place.code)}</p>
-  <Select items={options} mode="search" idKey="code" labelKey="name" placeholder="Find another area" on:select={gotoPlace} autoClear/>
+	<p style:margin="0 0 10px 0" style:padding={0}><strong>{ (place.parents[0].name == 'Wales')? "Unitary authority" : capitalise(place.gss.long)}: </strong>{capitalise(place.code)}</p>
+	<Select items={options} mode="search" idKey="code" labelKey="name" placeholder="Find another area" on:select={gotoPlace} autoClear/>
 </Titleblock>
 
 <Article>
 	<Section backlink hr>
-    {#if loaded}
-    {#if wal}
-    {#if ladData}
-    {#if place}
-    {#if template}
+    <!-- {#if wal} -->
+    <!-- {#if ladData} -->
+    <!-- {#if place} -->
+    <!-- {#if template} -->
     <div style="height: 50px"></div>
-    {#each results(place, rgn, topics) as res, i (i)}
-      {@html res}
-      <div style="width: 100%">
-        {#if i < place.stories.length}
-          {#if makeProps(i)}
-            <svelte:component this="{chartType(i)}" {...makeProps(i)}/>
-          {/if}
-        {/if}
-      </div>
-    {/each}
+
+	{#if !production}
+		{#if loaded}
+			{#each results(place, rgn, topics) as res, i (i)}
+				{@html res}
+				<div style="width: 100%">
+					{#if i < place.stories.length}
+						{#if makeProps(i)}
+							<svelte:component this="{chartType(i)}" {...makeProps(i)}/>
+						{/if}
+					{/if}
+				</div>
+			{/each}
+		{/if}
+	{:else}
+		{#each prodResults as res, i (i)}
+			{@html res}
+			<div style="width: 100%">
+				{#if i < place.stories.length}
+					{#if makeProps(i)}
+						<svelte:component this="{chartType(i)}" {...makeProps(i)}/>
+					{/if}
+				{/if}
+			</div>
+		{/each}
+	{/if}
+
     {#if place.stories.length>6}
     <button on:click={readMore}>
       <div class="triangle-container">
@@ -547,11 +593,10 @@
     </button>
     {/if}
     <div style="height: 50px"></div>
+    <!-- {/if} -->
+    <!-- {/if}
     {/if}
-    {/if}
-    {/if}
-    {/if}
-    {/if}
+    {/if} -->
   </Section>
 
   <Linkbox

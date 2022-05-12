@@ -35,6 +35,7 @@
     "pluralize": "^8.0.0",
     "regl": "^2.1.0",
     "robojournalist": "^0.0.9",
+    "rosaenlg": "^3.2.2",
     "yootils": "^0.3.1"
   }
 }

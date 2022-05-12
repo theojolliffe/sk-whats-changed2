@@ -39,8 +39,6 @@
 		return 'middle';
 	}
 	// $: xTickCal = Math.round((Math.max(...$data[0].map(d => d.y))-5)/10)*10
-	$: console.log('X data tick', xTickCal)
-
 	
 </script>
 

@@ -50,9 +50,9 @@ let chains = {
   'Female49plus': ['Female1-15']
 }
 
-let array = ['South East', 'South West', 'East', 'West Midlands', 'East Midlands', 'North East', 'North West']
+let array = ['South East', 'South West', 'West Midlands', 'East Midlands', 'North East', 'North West']
 function regionThe(place, nt) {
-  if (place=="East") { place = place + " England"}
+  if (place=="East") { place = place + "of England"}
   return ((!array.includes(place))|(nt=="NT")) ? place : 'The ' + place;
 }
 
