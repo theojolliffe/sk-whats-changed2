@@ -376,7 +376,7 @@ mixin topRank(i)
         | , while the percentage of 
         | #[+value(topic(i, otherEst(s, place, i, cha(s, place, i, "r"), 'change')).adj_noun)]
         | #[+value(ud(otherRank(s, place, i, 'cou'), 'increased', 'decreased'))]
-        | faster than anywhere else in the #[+value(city)].
+        | faster than anywhere else in the region.
         if ((i!=hiRank.rankIn)&(s[i][0]!='health'))
             p #[+nowHasReg(i)] 
         recordSaid('OtherChange')
@@ -399,7 +399,7 @@ mixin topRankLoc(i)
         | , while the percentage of 
         | #[+value(topic(i, otherEst(s, place, i, cha(s, place, i, "rl"), 'change')).adj_noun)]
         | #[+value(ud(otherRank(s, place, i, "rl"), 'grew', 'fell'))]
-        | faster than anywhere else in the #[+value(city)]
+        | faster than anywhere else in the region
         if ((i!=hiRank.rankIn)&(s[i][0]!='health'))
             p #[+nowHasReg(i)] 
         recordSaid('OtherChange')
@@ -580,7 +580,7 @@ mixin rank1reg(i)
                 | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
                 | , alongside 
                 | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)].
-            else if ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) )
+            else if ( ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"] ) && ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) ) )
                 | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
                 | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
                 | , alongside 
