@@ -611,6 +611,64 @@
         "measure": "usual residents",
         "measure_s": ""
     },
+    "disability": {
+        "general": "disability",
+        "synonym": "change in the proportion of disabled people here",
+        "profile": "amount of people with disabilities changed in {plcname}",
+        "notDisabled": {
+            "clausal_modifier": "{plcname} residents whose day-to-day activities are not limited by a long-term health problem or disability",
+            "verb_past": "that reported not being limited in their day-to-day activities",
+            "verb_past_samp": "reported not being limited in their day-to-day activities",
+            "adj_noun": "people who aren't limited by a long-term health problem or disability",
+            "verb": "who aren't limited by a long-term health problem or disability",
+            "subhead": {
+                "pos": "Lower proportion of people with disabilities",
+                "neg": "Higher proportion of people with disabilities",
+                "neu": "Disablity in {plcname}",
+                "buc": "{plcname} stood out from other areas for disability",
+                "sta": "Disablity in {plcname}"
+            },
+            "sample": "the proportion of people who aren't limited by a long-term health problem or disability",
+            "adj_noun_s": "people who aren't limited by a long-term health problem or disability",
+            "label": "Day-to-day activities not limited"
+        },
+        "little": {
+            "clausal_modifier": "{plcname} residents whose day-to-day activities are limited a little by a long-term health problem or disability",
+            "verb_past": "that reported being slightly limited in their day-to-day activities",
+            "verb_past_samp": "reported being limited a little in their day-to-day activities",
+            "adj_noun": "people who are slightly limited by a long-term health problem or disability",
+            "verb": "who are slightly limited by a long-term health problem or disability",
+            "subhead": {
+                "pos": "Rise in slightly limiting disability",
+                "neg": "Fall in slightly limiting disability",
+                "neu": "Disablity in {plcname}",
+                "buc": "{plcname} stood out from other areas for disability",
+                "sta": "Disablity in {plcname}"
+            },
+            "sample": "the proportion of people who are limited a little by a long-term health problem or disability",
+            "adj_noun_s": "people who are limited a little by a long-term health problem or disability",
+            "label": "Day-to-day activities limited a little"
+        },
+        "lot": {
+            "clausal_modifier": "{plcname} residents whose day-to-day activities are limited a lot by a long-term health problem or disability",
+            "verb_past": "that reported being considerably limited in their day-to-day activities",
+            "verb_past_samp": "reported being limited a lot in their day-to-day activities",
+            "adj_noun": "people who are considerably limited by a long-term health problem or disability",
+            "verb": "who are considerably limited by a long-term health problem or disability",
+            "subhead": {
+                "pos": "Rise in considerably limiting disability",
+                "neg": "Fall in considerably limiting disability",
+                "neu": "Disablity in {plcname}",
+                "buc": "{plcname} stood out from other areas for disability",
+                "sta": "Disablity in {plcname}"
+            },
+            "sample": "the proportion of people who are limited a lot by a long-term health problem or disability",
+            "adj_noun_s": "people who are limited a lot by a long-term health problem or disability",
+            "label": "Day-to-day activities limited a lot"
+        },
+        "measure": "usual residents",
+        "measure_s": ""
+    },
     "children": {
         "general": "family life",
         "synonym": "change in family life for many in {plcname}",

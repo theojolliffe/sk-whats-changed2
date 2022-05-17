@@ -376,7 +376,7 @@ mixin topRank(i)
         | , while the percentage of 
         | #[+value(topic(i, otherEst(s, place, i, cha(s, place, i, "r"), 'change')).adj_noun)]
         | #[+value(ud(otherRank(s, place, i, 'cou'), 'increased', 'decreased'))]
-        | faster than anywhere else in the #[+value(city)].
+        | faster than anywhere else in the region.
         if ((i!=hiRank.rankIn)&(s[i][0]!='health'))
             p #[+nowHasReg(i)] 
         recordSaid('OtherChange')
@@ -399,7 +399,7 @@ mixin topRankLoc(i)
         | , while the percentage of 
         | #[+value(topic(i, otherEst(s, place, i, cha(s, place, i, "rl"), 'change')).adj_noun)]
         | #[+value(ud(otherRank(s, place, i, "rl"), 'grew', 'fell'))]
-        | faster than anywhere else in the #[+value(city)]
+        | faster than anywhere else in the region
         if ((i!=hiRank.rankIn)&(s[i][0]!='health'))
             p #[+nowHasReg(i)] 
         recordSaid('OtherChange')
@@ -457,6 +457,7 @@ mixin sent3Perc(i)
             | #[+smallDisc(near.name)]
 
 // Blackburn with Darwen had the region's next lowest proportion of residents from a White ethnic group (69.2%), while 90.1% in nearby Salford are from a White ethnic group.
+// Torbay had the region's next highest proportion of privately rented homes (23%), while the proportion was 16% in North Somerset.
 mixin nextHighest(i)
     if (cur(s, place, i, "rl")<0)
         | #[+value(data[s[i][0]][s[i][1]+"_rank_local"]['above_below'][s[i][3]].above.name)] 
@@ -469,8 +470,39 @@ mixin nextHighest(i)
         | #[+value(topic(i).adj_noun)]
         | (#[+pc((data[s[i][0]][s[i][1]+"_rank_local"]['above_below'][s[i][3]].below.value))]),
     | while the proportion was
+    - console.log(data[s[i][0]][s[i][1]+"_rank_local"]['above_below'][s[i][3]])
+    | #[+pc((data[s[i][0]][s[i][1]+"_rank_local"]['above_below'][s[i][3]].below.value))]
     | #[+pc((near.data[s[i][0]][s[i][1]][2011][s[i][3]]))]
     | in #[+value(near.name)].
+    p
+        - let obj = data[s[i][0]][s[i][1]+"_rank_local"]['top_bottom_11'][s[i][3]]
+        - let highlow
+        - let objsign
+        if (cur(s, place, i, "rl")<0)
+            - highlow = "lowest"
+            - objsign = Object.fromEntries(Object.entries(obj).filter(([key]) => key < 0))
+        else 
+            - highlow = "highest"
+            - objsign = Object.fromEntries(Object.entries(obj).filter(([key]) => key > 0))
+        - let tops_bots = Object.fromEntries(Object.entries(objsign).filter(([key]) => objsign[key]['name'] != place.name))
+        - console.log('tb', objsign)
+        - console.log('tops_bots', tops_bots)
+        | #[+value(Object.values(tops_bots)[0]['name'])] had the region's 
+        | #[+ordi(Object.keys(tops_bots)[0])] #[+value(highlow)]
+        | proportion of #[+value(topic(i).adj_noun)] 
+        | (#[+pc(Object.values(tops_bots)[0]['2011'])]), 
+        | while 
+        | #[+value(Object.values(tops_bots)[1]['name'])] had the region's 
+        | #[+ordi(Object.keys(tops_bots)[1])] #[+value(highlow)]
+        | proportion
+        | (#[+pc(Object.values(tops_bots)[1]['2011'])]).
+
+mixin ordi(x)
+    if (x!=1)
+        - console.log('ordi', x)
+        | #[+value(parseInt(x), {'ORDINAL_TEXTUAL':true})]
+
+
 
 // As a result, this area had the country's highest proportion of private renters and the lowest proportion of homeowners.
 mixin nowHasCou(i)
@@ -580,7 +612,7 @@ mixin rank1reg(i)
                 | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
                 | , alongside 
                 | #[+value((data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name == place.name)? data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].name : data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-1":"1"].name)].
-            else if ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) )
+            else if ( ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"] ) && ( ( Math.abs(rl) > 1 ) && ( data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-2":"2"].change == data[s[i][0]][s[i][1]+'_rank_local'].top_bottom[s[i][3]][rl<0?"-3":"3"].change ) ) )
                 | joint #[+value(drop(rl, 'largest fall', 'largest rise'))]
                 | in the proportion of #[+value(topic(i, s[i][3]).adj_noun)]
                 | , alongside 
@@ -1478,7 +1510,7 @@ mixin chartTitleOther(i)
             | #[+value(topic(i).sample)] 
             | #[+value((cur(s, place, i)-cur(s, rgn, i)<0)?"was lower than":"was higher than")] across #[+value(parent)]
         h5 
-            | Percentage of #[+value(topics[s[i][0]].measure)] that #[+value(topic(i).verb_past)] 
+            | Percentage of #[+value(topics[s[i][0]].measure)] #[+value(topic(i).verb_past)] 
             | across local authority areas in #[+value(parent)] and the average across #[+value(cou.name)], March 2011
 
 mixin chartTitle(i)

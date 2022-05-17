@@ -47,7 +47,10 @@ let chains = {
   'Male1-15': ['Male49plus'],
   'Male49plus': ['Male1-15'],
   'Female1-15': ['Female49plus'],
-  'Female49plus': ['Female1-15']
+  'Female49plus': ['Female1-15'],
+  'notDisabled': ['lot', 'little'],
+  'lot': ['little', 'notDisabled'],
+  'little': ['lot', 'notDisabled'],
 }
 
 let array = ['South East', 'South West', 'West Midlands', 'East Midlands', 'North East', 'North West']
