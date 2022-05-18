@@ -67,7 +67,7 @@ marital.Seperated.clausal_modifier: adults in {plcname} that had divorced or sep
 
 tenure.rented_private.clausal_modifier: households in {plcname} that rented privately
 tenure.rented_social.clausal_modifier: {plcname} households that rented through social housing schemes
-tenure.owned.clausal_modifier: {plcname} households that owner their home
+tenure.owned.clausal_modifier: {plcname} households that owned their home
 
 health.good.clausal_modifier: {plcname} residents that described their health as good or very good
 health.fair.clausal_modifier: {plcname} residents that described their health as fair
@@ -124,7 +124,7 @@ marital.Seperated.verb_past: that said they had divorced or broken up with a mar
 
 tenure.rented_private.verb_past: that rented privately
 tenure.rented_social.verb_past: that rented socially
-tenure.owned.verb_past: that owner their home
+tenure.owned.verb_past: that owned their home
 
 health.good.verb_past: that said their health was good or very good
 health.fair.verb_past: that said their health was fair
@@ -181,7 +181,7 @@ marital.Seperated.verb_past_samp: said they had divorced or broken up with a mar
 
 tenure.rented_private.verb_past_samp: rented privately
 tenure.rented_social.verb_past_samp: lived in social housing
-tenure.owned.verb_past_samp: owner their home
+tenure.owned.verb_past_samp: owned their home
 
 health.good.verb_past_samp: said their health was good or very good
 health.fair.verb_past_samp: said their health was fair
@@ -236,7 +236,7 @@ marital.Seperated.adj_noun: people who had divorced or separated from a married 
 
 tenure.rented_private.adj_noun: privately rented homes
 tenure.rented_social.adj_noun: socially rented homes
-tenure.owned.adj_noun: households that owner their home
+tenure.owned.adj_noun: households that owned their home
 
 health.good.adj_noun: residents that perceived their health as good or very good
 health.fair.adj_noun: people that described their health as fair
@@ -291,7 +291,7 @@ marital.Seperated.verb: that said they had divorced or separated from a married 
 
 tenure.rented_private.verb: of privately rented homes
 tenure.rented_social.verb: of socially rented homes
-tenure.owned.verb: of households that owner their home
+tenure.owned.verb: of households that owned their home
 
 health.good.verb: that perceived their health as good or very good
 health.fair.verb: that described their health as fair

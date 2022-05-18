@@ -36,11 +36,11 @@
             "adj_noun_s": "social housing"
         },
         "owned": {
-            "clausal_modifier": "{plcname} households that owner their home",
-            "verb_past": "that owner their home",
-            "verb_past_samp": "owner their home",
-            "adj_noun": "households that owner their home",
-            "verb": "of households that owner their home",
+            "clausal_modifier": "{plcname} households that owned their home",
+            "verb_past": "that owned their home",
+            "verb_past_samp": "owned their home",
+            "adj_noun": "households that owned their home",
+            "verb": "of households that owned their home",
             "subhead": {
                 "pos": "Rise in home ownership",
                 "neg": "Fall in home ownership",
@@ -347,20 +347,20 @@
             "adj_noun_s": "single-parent households"
         },
         "OnePerson": {
-            "clausal_modifier": "households in {plcname}, which comprised a single person,",
-            "verb_past": "that comprised only a single person",
-            "verb_past_samp": "had only a single person",
-            "adj_noun": "single-person households",
-            "verb": "with just a single person",
+            "clausal_modifier": "households in {plcname}, which comprised one person,",
+            "verb_past": "that comprised only one person",
+            "verb_past_samp": "had only one person",
+            "adj_noun": "one-person households",
+            "verb": "with just one person",
             "subhead": {
                 "pos": "More people living alone",
                 "neg": "Fewer people living alone",
                 "neu": "Changing household dynamics",
-                "buc": "{plcname} stood out from other areas for single-person households",
+                "buc": "{plcname} stood out from other areas for one-person households",
                 "sta": "Living alone in {plcname}"
             },
-            "sample": "the percentage of households with only a single-person",
-            "adj_noun_s": "single-person households"
+            "sample": "the percentage of households with only one person",
+            "adj_noun_s": "one-person households"
         },
         "Married": {
             "clausal_modifier": "households in {plcname}, which comprised a married couple (with or without children),",
