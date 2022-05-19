@@ -485,8 +485,6 @@ mixin nextHighest(i)
             - highlow = "highest"
             - objsign = Object.fromEntries(Object.entries(obj).filter(([key]) => key > 0))
         - let tops_bots = Object.fromEntries(Object.entries(objsign).filter(([key]) => objsign[key]['name'] != place.name))
-        - console.log('tb', objsign)
-        - console.log('tops_bots', tops_bots)
         | #[+value(Object.values(tops_bots)[0]['name'])] had #[+value(parent)]'s 
         | #[+ordi(Object.keys(tops_bots)[0])] #[+value(highlow)]
         | proportion of #[+value(topic(i).adj_noun)] 
@@ -499,8 +497,7 @@ mixin nextHighest(i)
 
 mixin ordi(x)
     if (x!=1)
-        - console.log('ordi', x)
-        | #[+value(parseInt(x), {'ORDINAL_TEXTUAL':true})]
+        | #[+value(parseInt(Math.abs(x)), {'ORDINAL_TEXTUAL':true})]
 
 
 
@@ -508,7 +505,7 @@ mixin ordi(x)
 mixin nowHasCou(i)
     | As a result, this area had the country's 
     if (Math.abs(data[s[i][0]][s[i][1]+'_rank']['2011'][s[i][3]])!=1)
-        | #[+value(data[s[i][0]][s[i][1]+'_rank']['2011'][s[i][3]], {'ORDINAL_TEXTUAL':true})]
+        | #[+value(Math.abs(data[s[i][0]][s[i][1]+'_rank']['2011'][s[i][3]]), {'ORDINAL_TEXTUAL':true})]
     if (data[s[i][0]][s[i][1]+'_rank']['2011'][s[i][3]]<0)
         | lowest
     else
@@ -1429,7 +1426,6 @@ mixin percPara(i, chain0_01, chain0_11, chain1_01, chain1_11)
         | #[+mainPerc(i)]
 
 mixin para(i)
-    - console.log('sisi', s[i])
     if (s[i][1] == 'value')
         if (s[i][0] == 'agemed')
             h2 #[+subheadAge(i)]
@@ -1573,7 +1569,7 @@ mixin standfirst
 
 -console.log("eng", eng)
 -console.log("rgn", rgn)
--console.log("place", place)
+-console.log("place", place.similar)
 
 // Start of th article \/
 p #[+standfirst]
