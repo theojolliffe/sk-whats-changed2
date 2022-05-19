@@ -834,7 +834,9 @@ mixin sent2Diff(i, chain0_01, chain0_11, chain1_01, chain1_11)
                 | #[+pc(chain1_11)]
         | .
 
-mixin difference1(i)
+mixin difference1Near(i)
+    recordSaid('nearDiff')
+    - let curDif = 'nearDiff'
     | The percentage of #[+value(topic(i).adj_noun)] 
     if (Math.abs(cha(s, place, i))<1)
         | changed very little
@@ -849,53 +851,106 @@ mixin difference1(i)
             | in this #[+value((place.classification!='unk')?place.classification:'area')]
         syn
             | in this area
-    - var curDif
+    if (Math.abs(cha(s, place, i))<1)
+        | , while the proportion #[+value(ud(cha(s, near, i), 'increased', 'fell'))] in
+    else
+        if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, near, i)))
+            | , but at a slower rate than in
+        else
+            | at a faster rate than in
+    | #[+nearbyname].
+    | #[+smallDisc(near.name)]
+
+mixin difference1Simi(i)
+    recordSaid('simiDiff')
+    - let curDif = 'simiDiff'
+    | The percentage of #[+value(topic(i).adj_noun)] 
+    if (Math.abs(cha(s, place, i))<1)
+        | changed very little
+    else
+        | #[+value(ud(cha(s, place, i), 'increased', 'fell'))] 
+    synz {mode:'sequence'}
+        syn
+            | in #[+value(place.name)]
+        syn
+            | here
+        syn
+            | in this #[+value((place.classification!='unk')?place.classification:'area')]
+        syn
+            | in this area
+    if (Math.abs(cha(s, place, i))<1)
+        | , while the proportion #[+value(ud(cha(s, place.similar, i), 'increased', 'fell'))] in
+    else
+        if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, place.similar, i)))
+            | , but at a slower rate than in
+        else
+            | at a faster rate than in
+    | #[+similarname].
+    | #[+smallDisc(place.similar.name)]
+
+
+mixin difference1Reg(i)
+    recordSaid('regDiff')
+    - let curDif = 'regDiff'
+    | The percentage of #[+value(topic(i).adj_noun)] 
+    if (Math.abs(cha(s, place, i))<1)
+        | changed very little
+    else
+        | #[+value(ud(cha(s, place, i), 'increased', 'fell'))] 
+    synz {mode:'sequence'}
+        syn
+            | in #[+value(place.name)]
+        syn
+            | here
+        syn
+            | in this #[+value((place.classification!='unk')?place.classification:'area')]
+        syn
+            | in this area
+    if (Math.abs(cha(s, place, i))<1)
+        | , while the proportion #[+value(ud(cha(s, rgn, i), 'increased', 'fell'))] 
+    else
+        if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, rgn, i)))
+            | , but at a slower rate than
+        else
+            | at a faster rate than
+    | across #[+value(parent)].
+
+mixin difference1Cou(i)
+    recordSaid('couDiff')
+    - let curDif = 'couDiff'
+    | The percentage of #[+value(topic(i).adj_noun)] 
+    if (Math.abs(cha(s, place, i))<1)
+        | changed very little
+    else
+        | #[+value(ud(cha(s, place, i), 'increased', 'fell'))] 
+    synz {mode:'sequence'}
+        syn
+            | in #[+value(place.name)]
+        syn
+            | here
+        syn
+            | in this #[+value((place.classification!='unk')?place.classification:'area')]
+        syn
+            | in this area
+    if (Math.abs(cha(s, place, i))<1)
+        | , while the proportion #[+value(ud(cha(s, eng, i), 'increased', 'fell'))] 
+    else
+        if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, eng, i)))
+            | , but at a slower rate than
+        else
+            | at a faster rate than
+    | across #[+value(country)].
+
+
+mixin difference1(i)
     if ((stories[i].type.includes('nearDiff'))&(!hasSaid('nearDiff'))|(eq(stories[i].type, ['nearDiff', 'general'])))
-        recordSaid('nearDiff')
-        - curDif = 'nearDiff'
-        if (Math.abs(cha(s, place, i))<1)
-            | , while the proportion #[+value(ud(cha(s, near, i), 'increased', 'fell'))] in
-        else
-            if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, near, i)))
-                | , but at a slower rate than in
-            else
-                | at a faster rate than in
-        | #[+nearbyname].
-        | #[+smallDisc(near.name)]
+        | #[+difference1Near(i)]
     else if ((stories[i].type.includes('simiDiff'))&(!hasSaid('simiDiff'))|(eq(stories[i].type, ['simiDiff', 'general'])))
-        recordSaid('simiDiff')
-        - curDif = 'simiDiff'
-        if (Math.abs(cha(s, place, i))<1)
-            | , while the proportion #[+value(ud(cha(s, place.similar, i), 'increased', 'fell'))] in
-        else
-            if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, place.similar, i)))
-                | , but at a slower rate than in
-            else
-                | at a faster rate than in
-        | #[+similarname].
-        | #[+smallDisc(place.similar.name)]
+        | #[+difference1Simi(i)]
     else if (stories[i].type.includes('regDiff')&(!hasSaid('regDiff'))|(eq(stories[i].type, ['regDiff', 'general'])))
-        recordSaid('regDiff')
-        - curDif = 'regDiff'
-        if (Math.abs(cha(s, place, i))<1)
-            | , while the proportion #[+value(ud(cha(s, rgn, i), 'increased', 'fell'))] 
-        else
-            if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, rgn, i)))
-                | , but at a slower rate than
-            else
-                | at a faster rate than
-        | across #[+value(parent)].
+        | #[+difference1Reg(i)]
     else if (stories[i].type.includes('couDiff')&(!hasSaid('couDiff'))|(eq(stories[i].type, ['couDiff', 'general'])))
-        recordSaid('couDiff')
-        - curDif = 'couDiff'
-        if (Math.abs(cha(s, place, i))<1)
-            | , while the proportion #[+value(ud(cha(s, eng, i), 'increased', 'fell'))] 
-        else
-            if (Math.abs(cha(s, place, i)) < Math.abs(cha(s, eng, i)))
-                | , but at a slower rate than
-            else
-                | at a faster rate than
-        | across #[+value(country)].
+        | #[+difference1Cou(i)]
 
 //- The percentage of residents from a Black ethnic group changed very little in Lambeth, while the proportion increased across London.
 mixin difference(i, chain0_01, chain0_11, chain1_01, chain1_11)
@@ -965,8 +1020,9 @@ mixin similarname
 mixin nearbyname
     if (!hasSaid('NEARBY'))
         recordSaid('NEARBY')
-        | nearby
-    | #[+value(near.name)]
+        | #[+value(near.name)] (the local authority area that shares the largest boundary with #[+value(place.name)])
+    else
+        | nearby #[+value(near.name)]
 
 mixin buck(i, curBuck, chain0_01, chain0_11, chain1_01, chain1_11)
     - function pcnoprint(x) { if (Math.abs(x)<10) { return Math.round(x*10)/10 }  else { return Math.round(x) } }
@@ -1569,7 +1625,7 @@ mixin standfirst
 
 -console.log("eng", eng)
 -console.log("rgn", rgn)
--console.log("place", place.similar)
+-console.log("place", place)
 
 // Start of th article \/
 p #[+standfirst]
