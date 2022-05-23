@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ac283888.js",
+    "file": "start-ac2b5486.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -52,7 +52,7 @@
     ]
   },
   "src/routes/wordtree.svelte": {
-    "file": "pages/wordtree.svelte-fb376624.js",
+    "file": "pages/wordtree.svelte-8bc6eeb5.js",
     "src": "src/routes/wordtree.svelte",
     "isEntry": true,
     "isDynamicEntry": true,

@@ -134,11 +134,9 @@
         "synonym": "change in the ethnicity of {plcname}",
         "profile": "ethnicity of {plcname} changed substantially",
         "white": {
-            "clausal_modifier": "{plcname} residents from one of the White ethnic groups",
-            "verb_past": "that said they were from the White ethnic groups",
-            "verb_past_samp": "said they were from the White ethnic groups",
-            "adj_noun": "residents from the White ethnic groups",
-            "verb": "from the White ethnic groups",
+            "verb_past_samp_er": "said they were from the White ethnic groups",
+            "adj_noun_er": "residents from the White ethnic groups",
+            "verb_er": "from the White ethnic groups",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -146,16 +144,15 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the White ethnic groups",
-            "adj_noun_s": "people from the White ethnic groups",
+            "sample_title": "the population from the White ethnic groups",
             "label": "White"
         },
         "black": {
             "clausal_modifier": "{plcname} residents from one of the Black, Black British, Caribbean or African ethnic groups",
             "verb_past": "that said they were from the Black, Black British, Caribbean or African ethnic groups",
-            "verb_past_samp": "said they were from the Black, Black British, Caribbean or African ethnic groups",
-            "adj_noun": "residents from the Black, Black British, Caribbean or African ethnic groups",
-            "verb": "from the Black, Black British, Caribbean or African ethnic groups",
+            "verb_past_samp_er": "said they were from the Black, Black British, Caribbean or African ethnic groups",
+            "adj_noun_er": "residents from the Black, Black British, Caribbean or African ethnic groups",
+            "verb_er": "from the Black, Black British, Caribbean or African ethnic groups",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -163,16 +160,16 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the Black, Black British, Caribbean or African ethnic groups",
+            "sample_title": "the population from the Black, Black British, Caribbean or African ethnic groups",
             "adj_noun_s": "people from the Black, Black British, Caribbean or African ethnic groups",
             "label": "Black/Black British/Caribbean/African"
         },
         "asian": {
             "clausal_modifier": "{plcname} residents from one of the Asian or Asian British ethnic groups",
             "verb_past": "that said they were from the Asian or Asian British ethnic groups",
-            "verb_past_samp": "said they were from the Asian or Asian British ethnic groups",
-            "adj_noun": "residents from the Asian or Asian British ethnic groups",
-            "verb": "from the Asian or Asian British ethnic groups",
+            "verb_past_samp_er": "said they were from the Asian or Asian British ethnic groups",
+            "adj_noun_er": "residents from the Asian or Asian British ethnic groups",
+            "verb_er": "from the Asian or Asian British ethnic groups",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -180,16 +177,16 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the Asian or Asian British ethnic groups",
+            "sample_title": "the population from the Asian or Asian British ethnic groups",
             "adj_noun_s": "people from the Asian or Asian British ethnic groups",
             "label": "Asian/Asian British"
         },
         "mixed": {
             "clausal_modifier": "{plcname} residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "verb_past": "that said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
-            "verb_past_samp": "said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
-            "adj_noun": "residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
-            "verb": "from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "verb_past_samp_er": "said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "adj_noun_er": "residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "verb_er": "from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -197,16 +194,16 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
+            "sample_title": "the population from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "adj_noun_s": "people from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "label": "Mixed/Multiple"
         },
         "other": {
             "clausal_modifier": "{plcname} residents from the Other ethnic groups (Arab or any other ethnic group)",
             "verb_past": "that said they were from the Other ethnic groups (Arab or any other ethnic group)",
-            "verb_past_samp": "said they were from the Other ethnic groups (Arab or any other ethnic group)",
-            "adj_noun": "residents from the Other ethnic groups (Arab or any other ethnic group)",
-            "verb": "from the Other ethnic groups (Arab or any other ethnic group)",
+            "verb_past_samp_er": "said they were from the Other ethnic groups (Arab or any other ethnic group)",
+            "adj_noun_er": "residents from the Other ethnic groups (Arab or any other ethnic group)",
+            "verb_er": "from the Other ethnic groups (Arab or any other ethnic group)",
             "subhead": {
                 "pos": "Ethnicity in {plcname}",
                 "neg": "Ethnicity in {plcname}",
@@ -214,7 +211,7 @@
                 "buc": "Ethnicity in {plcname}",
                 "sta": "Ethnicity in {plcname}"
             },
-            "sample": "the population from the Other ethnic groups (Arab or any other ethnic group)",
+            "sample_title": "the population from the Other ethnic groups (Arab or any other ethnic group)",
             "adj_noun_s": "people from the Other ethnic groups (Arab or any other ethnic group)",
             "label": "Other"
         },
@@ -389,9 +386,9 @@
         "Christian": {
             "clausal_modifier": "people in {plcname} that described themselves as Christian",
             "verb_past": "that described themselves as Christian",
-            "verb_past_samp": "said they were Christian",
-            "adj_noun": "people who described themselves as Christian",
-            "verb": "that described themselves as Christian",
+            "verb_past_samp_er": "said they were Christian",
+            "adj_noun_er": "people who described themselves as Christian",
+            "verb_er": "that described themselves as Christian",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -399,16 +396,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Christian",
+            "sample_title": "the population who identified as Christian",
             "adj_noun_s": "people who identified as Christian",
             "label": "Christian"
         },
         "Buddhist": {
             "clausal_modifier": "people in {plcname} that described themselves as Buddhist",
             "verb_past": "that described themselves as Buddhist",
-            "verb_past_samp": "said they were Buddhist",
-            "adj_noun": "people who described themselves as Buddhist",
-            "verb": "that described themselves as Buddhist",
+            "verb_past_samp_er": "said they were Buddhist",
+            "adj_noun_er": "people who described themselves as Buddhist",
+            "verb_er": "that described themselves as Buddhist",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -416,16 +413,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Buddhist",
+            "sample_title": "the population who identified as Buddhist",
             "adj_noun_s": "people who identified as Buddhist",
             "label": "Buddhist"
         },
         "Hindu": {
             "clausal_modifier": "people in {plcname} that described themselves as Hindu",
             "verb_past": "that described themselves as Hindu",
-            "verb_past_samp": "said they were Hindu",
-            "adj_noun": "people who described themselves as Hindu",
-            "verb": "that described themselves as Hindu",
+            "verb_past_samp_er": "said they were Hindu",
+            "adj_noun_er": "people who described themselves as Hindu",
+            "verb_er": "that described themselves as Hindu",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -433,16 +430,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Hindu",
+            "sample_title": "the population who identified as Hindu",
             "adj_noun_s": "people who identified as Hindu",
             "label": "Hindu"
         },
         "Sikh": {
             "clausal_modifier": "people in {plcname} that described themselves as Sikh",
             "verb_past": "that described themselves as Sikh",
-            "verb_past_samp": "said they were Sikh",
-            "adj_noun": "people who described themselves as Sikh",
-            "verb": "that described themselves as Sikh",
+            "verb_past_samp_er": "said they were Sikh",
+            "adj_noun_er": "people who described themselves as Sikh",
+            "verb_er": "that described themselves as Sikh",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -450,16 +447,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Sikh",
+            "sample_title": "the population who identified as Sikh",
             "adj_noun_s": "people who identified as Sikh",
             "label": "Sikh"
         },
         "Jewish": {
             "clausal_modifier": "people in {plcname} that described themselves as Jewish",
             "verb_past": "that described themselves as Jewish",
-            "verb_past_samp": "said they were Jewish",
-            "adj_noun": "people who described themselves as Jewish",
-            "verb": "that described themselves as Jewish",
+            "verb_past_samp_er": "said they were Jewish",
+            "adj_noun_er": "people who described themselves as Jewish",
+            "verb_er": "that described themselves as Jewish",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -467,16 +464,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Jewish",
+            "sample_title": "the population who identified as Jewish",
             "adj_noun_s": "people who identified as Jewish",
             "label": "Jewish"
         },
         "Muslim": {
             "clausal_modifier": "people in {plcname} that described themselves as Muslim",
             "verb_past": "that described themselves as Muslim",
-            "verb_past_samp": "said they were Muslim",
-            "adj_noun": "people who described themselves as Muslim",
-            "verb": "that described themselves as Muslim",
+            "verb_past_samp_er": "said they were Muslim",
+            "adj_noun_er": "people who described themselves as Muslim",
+            "verb_er": "that described themselves as Muslim",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -484,16 +481,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified as Muslim",
+            "sample_title": "the population who identified as Muslim",
             "adj_noun_s": "people who identified as Muslim",
             "label": "Muslim"
         },
         "Noreligion": {
             "clausal_modifier": "people in {plcname} that said they had no religion",
             "verb_past": "that said they had no religion",
-            "verb_past_samp": "said they had no religion",
-            "adj_noun": "people who described themselves as having no religion",
-            "verb": "that described themselves as having no religion",
+            "verb_past_samp_er": "said they had no religion",
+            "adj_noun_er": "people who described themselves as having no religion",
+            "verb_er": "that described themselves as having no religion",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -501,16 +498,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population without a religion",
+            "sample_title": "the population without a religion",
             "adj_noun_s": "people without a religion",
             "label": "No religion"
         },
         "Religionnotstated": {
             "clausal_modifier": "people in {plcname} that did not state their religion",
             "verb_past": "that did not state their religion",
-            "verb_past_samp": "did not state their religion",
-            "adj_noun": "people who did not disclose their religious affiliation",
-            "verb": "that did not disclose their religious affiliation",
+            "verb_past_samp_er": "did not state their religion",
+            "adj_noun_er": "people who did not disclose their religious affiliation",
+            "verb_er": "that did not disclose their religious affiliation",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -518,16 +515,16 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the percentage of the popultion that did not state their religion",
+            "sample_title": "the percentage of the popultion that did not state their religion",
             "adj_noun_s": "people that did not state their religion",
             "label": "Religion not stated"
         },
         "Otherreligion": {
             "clausal_modifier": "people in {plcname} that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "verb_past": "that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
-            "verb_past_samp": "said they identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
-            "adj_noun": "people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
-            "verb": "that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
+            "verb_past_samp_er": "said they identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
+            "adj_noun_er": "people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
+            "verb_er": "that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "subhead": {
                 "pos": "Religion in {plcname}",
                 "neg": "Religion in {plcname}",
@@ -535,7 +532,7 @@
                 "buc": "Religion in {plcname}",
                 "sta": "Religion in {plcname}"
             },
-            "sample": "the population who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
+            "sample_title": "the population who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "adj_noun_s": "people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "label": "Other"
         },
