@@ -1,7 +1,7 @@
 {
     "tenure": {
         "general": "housing tenure",
-        "synonym": "housing tenure change in {plcname}",
+        "synonym": "change in housing tenure for many in {plcname}",
         "profile": "housing tenure in {plcname} changed substantially",
         "rented_private": {
             "clausal_modifier": "households in {plcname} that rented privately",
@@ -131,8 +131,8 @@
     },
     "ethnicity": {
         "general": "ethnicity",
-        "synonym": "change in the ethnicity of {plcname}",
-        "profile": "ethnicity of {plcname} changed substantially",
+        "synonym": "change in ethnicity in {plcname}",
+        "profile": "ethnicity in {plcname} changed substantially",
         "white": {
             "verb_past_samp_er": "said they were from the White ethnic groups",
             "adj_noun_er": "residents from the White ethnic groups",
@@ -611,7 +611,7 @@
     "disability": {
         "general": "disability",
         "synonym": "change in the proportion of disabled people here",
-        "profile": "amount of people with disabilities changed in {plcname}",
+        "profile": "the amount of people with disabilities changed in {plcname}",
         "notDisabled": {
             "clausal_modifier": "{plcname} residents whose day-to-day activities are not limited by a long-term health problem or disability",
             "verb_past": "that reported not being limited in their day-to-day activities",
@@ -851,7 +851,7 @@
         "measure_s": "people aged 16 and over"
     },
     "population": {
-        "general": "population",
+        "general": "population size",
         "adj": {
             "high": "most densely populated",
             "low": "least densely populated"
