@@ -1684,7 +1684,7 @@ mixin standfirst
         | #[+tenYears].
         | #[+coincide]
         eachz sfi in sf.slice(1,) with { separator: ',', last_separator: 'and' }
-            | #[+value(topics[sfi[0]].general)]
+            | #[+value(topics[sfi[0]].general_sf)]
         | .
 
 -console.log("eng", eng)

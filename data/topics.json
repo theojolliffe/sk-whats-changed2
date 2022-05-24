@@ -1,5 +1,6 @@
 {
     "tenure": {
+        "general_sf": "housing tenure",
         "general": "housing tenure",
         "synonym": "change in housing tenure for many in {plcname}",
         "profile": "housing tenure in {plcname} changed substantially",
@@ -56,6 +57,7 @@
         "measure_s": "households"
     },
     "welsh": {
+        "general_sf": "knowledge of the Welsh language",
         "general": "knowledge of the Welsh language",
         "profile": "the use of welsh changed substantially in {plcname}",
         "SpeaksWelsh": {
@@ -74,6 +76,7 @@
         "measure_s": "people aged three and over"
     },
     "health": {
+        "general_sf": "health",
         "general": "health",
         "synonym": "change in the local population's well-being",
         "profile": "health {health} substantially in {plcname}",
@@ -130,8 +133,7 @@
         "measure_s": ""
     },
     "ethnicity": {
-        "general": "ethnicity",
-        "synonym": "change in ethnicity in {plcname}",
+        "general_sf": "ethnicity",
         "profile": "ethnicity in {plcname} changed substantially",
         "white": {
             "verb_past_samp_er": "said they were from the White ethnic groups",
@@ -148,8 +150,6 @@
             "label": "White"
         },
         "black": {
-            "clausal_modifier": "{plcname} residents from one of the Black, Black British, Caribbean or African ethnic groups",
-            "verb_past": "that said they were from the Black, Black British, Caribbean or African ethnic groups",
             "verb_past_samp_er": "said they were from the Black, Black British, Caribbean or African ethnic groups",
             "adj_noun_er": "residents from the Black, Black British, Caribbean or African ethnic groups",
             "verb_er": "from the Black, Black British, Caribbean or African ethnic groups",
@@ -165,8 +165,6 @@
             "label": "Black/Black British/Caribbean/African"
         },
         "asian": {
-            "clausal_modifier": "{plcname} residents from one of the Asian or Asian British ethnic groups",
-            "verb_past": "that said they were from the Asian or Asian British ethnic groups",
             "verb_past_samp_er": "said they were from the Asian or Asian British ethnic groups",
             "adj_noun_er": "residents from the Asian or Asian British ethnic groups",
             "verb_er": "from the Asian or Asian British ethnic groups",
@@ -182,8 +180,6 @@
             "label": "Asian/Asian British"
         },
         "mixed": {
-            "clausal_modifier": "{plcname} residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
-            "verb_past": "that said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "verb_past_samp_er": "said they were from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "adj_noun_er": "residents from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
             "verb_er": "from Mixed/multiple ethnic groups (White and Asian, White and Black African, White and Black Caribbean or Other Mixed)",
@@ -199,8 +195,6 @@
             "label": "Mixed/Multiple"
         },
         "other": {
-            "clausal_modifier": "{plcname} residents from the Other ethnic groups (Arab or any other ethnic group)",
-            "verb_past": "that said they were from the Other ethnic groups (Arab or any other ethnic group)",
             "verb_past_samp_er": "said they were from the Other ethnic groups (Arab or any other ethnic group)",
             "adj_noun_er": "residents from the Other ethnic groups (Arab or any other ethnic group)",
             "verb_er": "from the Other ethnic groups (Arab or any other ethnic group)",
@@ -220,6 +214,7 @@
         "measure_s": ""
     },
     "economic": {
+        "general_sf": "jobs",
         "general": "jobs",
         "synonym": "change in the employment status of many here",
         "profile": "work life changed for many in {plcname}",
@@ -308,6 +303,7 @@
         "measure_s": "people aged 16 to 74"
     },
     "household": {
+        "general_sf": "relationships",
         "general": "relationships",
         "synonym": "change in family life for many in {plcname}",
         "profile": "housing in {plcname} changed substantially",
@@ -380,12 +376,9 @@
         "measure_s": "households"
     },
     "religion": {
-        "general": "religion",
-        "synonym": "change in the local population's religion",
+        "general_sf": "religion",
         "profile": "the religious profile of {plcname} changed substantially",
         "Christian": {
-            "clausal_modifier": "people in {plcname} that described themselves as Christian",
-            "verb_past": "that described themselves as Christian",
             "verb_past_samp_er": "said they were Christian",
             "adj_noun_er": "people who described themselves as Christian",
             "verb_er": "that described themselves as Christian",
@@ -401,8 +394,6 @@
             "label": "Christian"
         },
         "Buddhist": {
-            "clausal_modifier": "people in {plcname} that described themselves as Buddhist",
-            "verb_past": "that described themselves as Buddhist",
             "verb_past_samp_er": "said they were Buddhist",
             "adj_noun_er": "people who described themselves as Buddhist",
             "verb_er": "that described themselves as Buddhist",
@@ -418,8 +409,6 @@
             "label": "Buddhist"
         },
         "Hindu": {
-            "clausal_modifier": "people in {plcname} that described themselves as Hindu",
-            "verb_past": "that described themselves as Hindu",
             "verb_past_samp_er": "said they were Hindu",
             "adj_noun_er": "people who described themselves as Hindu",
             "verb_er": "that described themselves as Hindu",
@@ -435,8 +424,6 @@
             "label": "Hindu"
         },
         "Sikh": {
-            "clausal_modifier": "people in {plcname} that described themselves as Sikh",
-            "verb_past": "that described themselves as Sikh",
             "verb_past_samp_er": "said they were Sikh",
             "adj_noun_er": "people who described themselves as Sikh",
             "verb_er": "that described themselves as Sikh",
@@ -452,8 +439,6 @@
             "label": "Sikh"
         },
         "Jewish": {
-            "clausal_modifier": "people in {plcname} that described themselves as Jewish",
-            "verb_past": "that described themselves as Jewish",
             "verb_past_samp_er": "said they were Jewish",
             "adj_noun_er": "people who described themselves as Jewish",
             "verb_er": "that described themselves as Jewish",
@@ -469,8 +454,6 @@
             "label": "Jewish"
         },
         "Muslim": {
-            "clausal_modifier": "people in {plcname} that described themselves as Muslim",
-            "verb_past": "that described themselves as Muslim",
             "verb_past_samp_er": "said they were Muslim",
             "adj_noun_er": "people who described themselves as Muslim",
             "verb_er": "that described themselves as Muslim",
@@ -486,8 +469,6 @@
             "label": "Muslim"
         },
         "Noreligion": {
-            "clausal_modifier": "people in {plcname} that said they had no religion",
-            "verb_past": "that said they had no religion",
             "verb_past_samp_er": "said they had no religion",
             "adj_noun_er": "people who described themselves as having no religion",
             "verb_er": "that described themselves as having no religion",
@@ -503,8 +484,6 @@
             "label": "No religion"
         },
         "Religionnotstated": {
-            "clausal_modifier": "people in {plcname} that did not state their religion",
-            "verb_past": "that did not state their religion",
             "verb_past_samp_er": "did not state their religion",
             "adj_noun_er": "people who did not disclose their religious affiliation",
             "verb_er": "that did not disclose their religious affiliation",
@@ -520,8 +499,6 @@
             "label": "Religion not stated"
         },
         "Otherreligion": {
-            "clausal_modifier": "people in {plcname} that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
-            "verb_past": "that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "verb_past_samp_er": "said they identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "adj_noun_er": "people who identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
             "verb_er": "that identified with a religion other than Christianity, Islam, Hinduism, Judaism, Buddhism or Sikhism",
@@ -541,6 +518,7 @@
         "measure_s": ""
     },
     "care": {
+        "general_sf": "unpaid care provision",
         "general": "unpaid care provision",
         "synonym": "change in the amount of unpaid care provided here",
         "profile": "unpaid care provision changed in {plcname}",
@@ -609,6 +587,7 @@
         "measure_s": ""
     },
     "disability": {
+        "general_sf": "disability",
         "general": "disability",
         "synonym": "change in the proportion of disabled people here",
         "profile": "the amount of people with disabilities changed in {plcname}",
@@ -667,6 +646,7 @@
         "measure_s": ""
     },
     "children": {
+        "general_sf": "family life",
         "general": "family life",
         "synonym": "change in family life for many in {plcname}",
         "profile": "family life changed for many in {plcname}",
@@ -723,6 +703,7 @@
         "measure_s": "households"
     },
     "hoursworked": {
+        "general_sf": "work life",
         "general": "work life",
         "synonym": "change in the working patterns of many in {plcname}",
         "profile": "work life changed for many in {plcname}",
@@ -795,6 +776,7 @@
         "measure_s": "people aged 16 to 74 (in employment the week before the Census 2011)"
     },
     "marital": {
+        "general_sf": "marriage",
         "general": "marriage",
         "synonym": "change in the relationships of many here",
         "profile": "family life changed for many in {plcname}",
@@ -851,6 +833,7 @@
         "measure_s": "people aged 16 and over"
     },
     "population": {
+        "general_sf": "population size",
         "general": "population size",
         "adj": {
             "high": "most densely populated",
@@ -865,6 +848,7 @@
         "measure_s": ""
     },
     "agemed": {
+        "general_sf": "average age",
         "general": "average age",
         "adj": {
             "high": "oldest",
