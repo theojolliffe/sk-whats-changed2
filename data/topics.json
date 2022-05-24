@@ -316,7 +316,7 @@
             "verb_past": "that had an unmarried couple",
             "verb_past_samp": "had an unmarried couple",
             "adj_noun": "households with an unmarried couple",
-            "verb": "with an unmarried couple",
+            "verb": "of households comprising an unmarried couple",
             "subhead": {
                 "pos": "More people cohabiting",
                 "neg": "Fewer people cohabiting",
@@ -332,7 +332,7 @@
             "verb_past": "that had a single parent",
             "verb_past_samp": "had a single parent",
             "adj_noun": "single-parent households",
-            "verb": "with a single parent",
+            "verb": "of households comprising a single parent",
             "subhead": {
                 "pos": "More single parents",
                 "neg": "Fewer single parents",
@@ -348,7 +348,7 @@
             "verb_past": "that comprised only one person",
             "verb_past_samp": "had only one person",
             "adj_noun": "one-person households",
-            "verb": "with just one person",
+            "verb": "of households comprising just one person",
             "subhead": {
                 "pos": "More people living alone",
                 "neg": "Fewer people living alone",
@@ -360,17 +360,17 @@
             "adj_noun_s": "one-person households"
         },
         "Married": {
-            "clausal_modifier": "households in {plcname}, which comprised a married couple (with or without children),",
+            "clausal_modifier": "households in {plcname} which comprised a married couple (with or without children)",
             "verb_past": "that had a married couple",
             "verb_past_samp": "had a married couple",
             "adj_noun": "households with a married couple",
-            "verb": "with a married couple",
+            "verb": "of households comprising a married couple",
             "subhead": {
                 "pos": "The percentage of married people increased",
                 "neg": "Fewer married people",
                 "neu": "Changing household dynamics",
-                "buc": "{plcname} reverses marriage",
-                "sta": "Marriage in {plcname}"
+                "buc": "{plcname} stood out from other areas for married couples",
+                "sta": "Married couples in {plcname}"
             },
             "sample": "the percentage of households with a married couple",
             "adj_noun_s": "married households"
