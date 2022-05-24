@@ -1422,8 +1422,8 @@ mixin ethrel(i)
             | from 
             | #[+val(data[s[i][0]].value[2001][bigAbs3])]
             | in 2001 (#[+pc(data[s[i][0]].perc[2011][bigAbs3])]).
-    p 
-        | There are many factors that can cause changes to the !{(s[i][0]=='religion')?'religious':'ethnic'} profile of an area, such as migration and varying fertility rates between !{(s[i][0]=='religion')?'religious':'ethnic'} groups. Changes may also be caused by differences in the way individuals choose to self-identify between censuses.
+    //- p 
+    //-     | There are many factors that can cause changes to the !{(s[i][0]=='religion')?'religious':'ethnic'} profile of an area, such as migration and varying fertility rates between !{(s[i][0]=='religion')?'religious':'ethnic'} groups. Changes may also be caused by differences in the way individuals choose to self-identify between censuses.
 
 mixin headline(i)
     if ((findOne(stories[i].type, ['couBuck', 'regBuck']))&(!stories[i].type.includes('natRank')))
