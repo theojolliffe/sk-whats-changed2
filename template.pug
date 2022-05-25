@@ -1261,14 +1261,13 @@ mixin ethrel(i)
         | The number of people in !{place.name} 
         | #[+value(topics[s[i][0]][bigChange]['verb_er'])]
         if (valnoprint(data[s[i][0]].value[2001][bigChange]) != valnoprint(data[s[i][0]].value[2011][bigChange]))
-            | #[+value(ud(cha(s, place, i), 'increased', 'decreased'))] 
+            | #[+value(ud((data[s[i][0]].value[2011][bigChange] - data[s[i][0]].value[2001][bigChange]), 'increased', 'decreased'))]
             | from #[+val(data[s[i][0]].value[2001][bigChange])] in 2001 
             | to #[+val(data[s[i][0]].value[2011][bigChange])] in 2011.
         else 
-            | remained close to #[+value(valnoprint(data[s[i][0]].value[2011][bigChange]))] between the last two censuses.
+            | remained close to #[+val(data[s[i][0]].value[2011][bigChange])] between the last two censuses.
         if (pcnoprint(data[s[i][0]].perc[2001][bigChange]) == pcnoprint(data[s[i][0]].perc[2011][bigChange]))
-            | As a share of the total population, 
-            | the percentage 
+            | As a share of the total population, the percentage 
             | remained close to #[+pc(data[s[i][0]].perc[2011][bigChange])].
         else
             if (Math.sign(data[s[i][0]].value[2011][bigChange]-data[s[i][0]].value[2001][bigChange])==Math.sign(data[s[i][0]].perc[2011][bigChange]-data[s[i][0]].perc[2001][bigChange]))
@@ -1289,7 +1288,7 @@ mixin ethrel(i)
         - var couDiff = Math.round(cou.data[s[i][0]].perc[2011][bigChange] - cou.data[s[i][0]].perc[2001][bigChange])
         if (Math.sign(locDiff)!=Math.sign(regDiff))
             | Across !{parent}, the percentage of people from this !{(s[i][0]=='religion')?'religious':'ethnic'} group
-            | !{regDiff>0?'increased by':'fell'} 
+            | !{regDiff>0?'increased':'fell'} 
             | from #[+pc(rgn.data[s[i][0]].perc[2001][bigChange])] to #[+pc(rgn.data[s[i][0]].perc[2011][bigChange])]
             if (cou.name!='Wales')
                 | , while across !{cou.name} the percentage went from
@@ -1308,7 +1307,7 @@ mixin ethrel(i)
             - var pcbc01 = pcnoprint(data[s[i][0]].perc[2001][bigChange])
             - var pcbc11 = pcnoprint(data[s[i][0]].perc[2011][bigChange])
             if (pcbc01==pcbc11)
-                | (#[+pc(rgn.data[s[i][0]].perc[2011][bigChange])])
+                | (which remained close #[+pc(rgn.data[s[i][0]].perc[2011][bigChange])])
             else
                 | (from #[+pc(rgn.data[s[i][0]].perc[2001][bigChange])] to 
                 | #[+pc(rgn.data[s[i][0]].perc[2011][bigChange])])
@@ -1318,9 +1317,9 @@ mixin ethrel(i)
                 else
                     if (locDiff == couDiff)
                         | , but at a similar rate to 
-                    else if (locDiff > couDiff)
+                    else if (Math.abs(locDiff) > Math.abs(couDiff))
                         | , but at a faster rate than 
-                    else if (locDiff < couDiff)
+                    else if (Math.abs(locDiff) < Math.abs(couDiff))
                         | , but at a slower rate than
                 | the average across !{cou.name} 
                 | (from #[+pc(cou.data[s[i][0]].perc[2001][bigChange])] to 
@@ -1413,7 +1412,7 @@ mixin ethrel(i)
         | #[+val(data[s[i][0]].value[2011][bigAbs3])] people (#[+pc(data[s[i][0]].perc[2001][bigAbs3])])
         | #[+value(topics[s[i][0]][bigAbs3]['verb_past_samp_er'])],
         if (data[s[i][0]].value[2001][bigAbs3].toPrecision(2) == data[s[i][0]].value[2011][bigAbs3].toPrecision(2))
-            | similar to the amount in 2001 (which at the time represented #[+pc(data[s[i][0]].perc[2011][bigAbs3])])
+            | similar to the amount in 2001 (which at the time represented #[+pc(data[s[i][0]].perc[2011][bigAbs3])] of the local population)
         else 
             if (data[s[i][0]].value[2001][bigAbs3]<data[s[i][0]].value[2011][bigAbs3])
                 | up 
