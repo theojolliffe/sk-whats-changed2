@@ -99,6 +99,8 @@
 	export let prodResults;
 	export let cou;
 	export let ladData;
+
+	console.log('topics', topics)
   
 	var health, expand, props;
 
@@ -289,7 +291,7 @@
 				s[3] = s[3]+"_"+s[4]
 				s.pop()
 			}
-		if (["religion", "agemed", "ethnicity", "care"].includes(s[0])) {
+		if (["religion", "agemed", "ethnicity", "care", "disability"].includes(s[0])) {
 
 			function dtrans(d, g) {
 				let a = []
@@ -498,7 +500,7 @@
 			s[3] = s[3]+"_"+s[4]
 			s.pop()
 		}
-		if (["religion", "agemed", "ethnicity", "care"].includes(s[0])) {
+		if (["religion", "agemed", "ethnicity", "care", "disability"].includes(s[0])) {
 			return AgeChart
 		} else if (["care"].includes(s[0])) {
 			return HBarChart

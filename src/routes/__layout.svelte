@@ -27,7 +27,7 @@
 </svelte:head>
 
 <Warning>
-  WARNING! This is a prototype.
+  WARNING! This is a prototype containing a combination of old and synthetic data. This prototype contains inaccuracies. Please do not share data from this prototype.
 </Warning>
 
 <ONSHeader {baseurl} {path} {lang}/>
